@@ -30,24 +30,24 @@
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
             "projectReferences": {
-              "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj": {
-                "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj"
+              "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj": {
+                "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj"
               }
             }
           },
           "net8.0-ios18.0": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {
-              "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj": {
-                "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj"
+              "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj": {
+                "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj"
               }
             }
           },
           "net8.0-maccatalyst18.0": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {
-              "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj": {
-                "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj"
+              "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj": {
+                "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj"
               }
             }
           }
@@ -67,6 +67,32 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -110,6 +136,32 @@
         "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -153,6 +205,32 @@
         "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -216,22 +294,20 @@
         }
       }
     },
-    "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj": {
+    "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj",
-        "projectName": "BubbleTeaShop.Core",
-        "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/BubbleTeaShop.Core.csproj",
+        "projectUniqueName": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj",
+        "projectName": "BubbleTesShop.Backend",
+        "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj",
         "packagesPath": "/Users/antiffat/.nuget/packages/",
-        "outputPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/obj/",
+        "outputPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/obj/",
         "projectStyle": "PackageReference",
-        "crossTargeting": true,
         "configFilePaths": [
           "/Users/antiffat/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net8.0",
-          "net8.0-maccatalyst"
+          "net8.0"
         ],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
@@ -240,10 +316,6 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
-          },
-          "net8.0-maccatalyst18.0": {
-            "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {}
           }
         },
@@ -262,15 +334,27 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.8, )"
+              "version": "[8.0.19, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[9.0.8, )"
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [
@@ -285,48 +369,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
-        },
-        "net8.0-maccatalyst18.0": {
-          "targetAlias": "net8.0-maccatalyst",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[9.0.8, )"
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.17, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "xamarinios10",
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.MacCatalyst": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

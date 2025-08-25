@@ -19,3 +19,4 @@
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/obj/Debug/net8.0-maccatalyst/BubbleTeaShop.Core.pdb
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/obj/Debug/net8.0-maccatalyst/BubbleTeaShop.Core.genruntimeconfig.cache
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/obj/Debug/net8.0-maccatalyst/ref/BubbleTeaShop.Core.dll
+/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Core/obj/Debug/net8.0-maccatalyst/BubbleTeaShop.Core.sourcelink.json
