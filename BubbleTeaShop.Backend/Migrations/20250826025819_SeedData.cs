@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace BubbleTesShop.Backend.Migrations
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
+namespace BubbleTeaShop.Backend.Migrations
 {
     /// <inheritdoc />
-    public partial class DbInitialization : Migration
+    public partial class SeedData : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -375,6 +377,139 @@ namespace BubbleTesShop.Backend.Migrations
                         principalTable: "OrderLines",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Employees",
+                columns: new[] { "Id", "Address", "Email", "FullName", "HygieneScore", "Phone", "RegisterProficiency", "Salary", "TrainingSessionsConducted" },
+                values: new object[,]
+                {
+                    { 1, "789 Main St, Warsaw, Poland", "anna.k@bubbleheaven.pl", "Anna Kowalska", 9, "123456789", 10, 50000f, 5 },
+                    { 2, "101 Side Rd, Krakow, Poland", "piotr.n@bubbleheaven.pl", "Piotr Nowak", 10, "987654321", 8, 65000f, 10 },
+                    { 3, "202 Center Ave, Warsaw, Poland", "ewa.m@bubbleheaven.pl", "Ewa Mazur", 8, "112233445", 9, 45000f, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "MenuItemAllergens",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Soy" },
+                    { 2, "Milk" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "MenuItems",
+                columns: new[] { "Id", "BasePrice", "Name", "StockQuantity" },
+                values: new object[,]
+                {
+                    { 1, 15.0, "Strawberry Fruit Tea", 100 },
+                    { 2, 18.0, "Classic Pearl Milk Tea", 150 },
+                    { 3, 22.5, "Choco Chip Frappe", 80 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Orders",
+                columns: new[] { "Id", "OrderDateTime", "Status" },
+                values: new object[] { 1, new DateTime(2024, 7, 27, 12, 30, 0, 0, DateTimeKind.Local), 4 });
+
+            migrationBuilder.InsertData(
+                table: "Stores",
+                columns: new[] { "Id", "Location", "Name" },
+                values: new object[,]
+                {
+                    { 1, "123 Tea St, Warsaw, Poland", "Bubble Heaven" },
+                    { 2, "456 Pearl Ave, Krakow, Poland", "The Brew Nook" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AssignmentHistories",
+                columns: new[] { "EmployeeId", "StartDate", "StoreId", "EndDate" },
+                values: new object[] { 1, new DateTime(2024, 6, 1, 2, 0, 0, 0, DateTimeKind.Local), 1, new DateTime(2024, 8, 1, 2, 0, 0, 0, DateTimeKind.Local) });
+
+            migrationBuilder.InsertData(
+                table: "EmployeeRoleMappings",
+                columns: new[] { "EmployeeId", "EmployeeRole" },
+                values: new object[,]
+                {
+                    { 1, 0 },
+                    { 1, 2 },
+                    { 2, 1 },
+                    { 2, 2 },
+                    { 3, 0 },
+                    { 3, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Frappes",
+                columns: new[] { "Id", "BaseFlavor", "HasWhippedCream" },
+                values: new object[] { 3, 1, true });
+
+            migrationBuilder.InsertData(
+                table: "FruitTeas",
+                columns: new[] { "Id", "FruitBase", "IceLevel", "TeaBase" },
+                values: new object[] { 1, 0, 2, 0 });
+
+            migrationBuilder.InsertData(
+                table: "MenuItemStores",
+                columns: new[] { "MenuItemsId", "StoresId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 2, 1 },
+                    { 2, 2 },
+                    { 3, 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "MenuItem_MenuItemAllergens",
+                columns: new[] { "MenuItemAllergensId", "MenuItemsId" },
+                values: new object[,]
+                {
+                    { 2, 2 },
+                    { 2, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "MilkTeas",
+                columns: new[] { "Id", "MilkBase", "TeaBase" },
+                values: new object[] { 2, 0, 0 });
+
+            migrationBuilder.InsertData(
+                table: "OrderLines",
+                columns: new[] { "Id", "MenuItemId", "OrderId", "Quantity", "Size" },
+                values: new object[,]
+                {
+                    { 1, 1, 1, 2, 2 },
+                    { 2, 2, 1, 1, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Shifts",
+                columns: new[] { "Id", "DayOfWeek", "EndTime", "ManagingEmployeeId", "StartTime" },
+                values: new object[,]
+                {
+                    { 1, 0, new DateTime(2024, 7, 29, 17, 0, 0, 0, DateTimeKind.Unspecified), 1, new DateTime(2024, 7, 29, 9, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, 1, new DateTime(2024, 7, 30, 18, 0, 0, 0, DateTimeKind.Unspecified), 2, new DateTime(2024, 7, 30, 10, 0, 0, 0, DateTimeKind.Unspecified) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "EmployeeWorksInShifts",
+                columns: new[] { "EmployeesId", "WorksInShiftsId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 2, 2 },
+                    { 3, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "OrderLineToppings",
+                columns: new[] { "OrderLineId", "Topping" },
+                values: new object[,]
+                {
+                    { 1, 0 },
+                    { 1, 1 }
                 });
 
             migrationBuilder.CreateIndex(
