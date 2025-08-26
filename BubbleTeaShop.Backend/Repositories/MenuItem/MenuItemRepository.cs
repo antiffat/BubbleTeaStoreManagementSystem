@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BubbleTesShop.Backend.Repositories;
 
-public class MenuItemRepository
+public class MenuItemRepository : IMenuItemRepository
 {
     private readonly ApplicationDbContext _context;
     
