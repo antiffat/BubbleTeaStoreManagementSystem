@@ -18,13 +18,11 @@ public class OrderLine
     [Required]
     public int Quantity { get; set; }
 
-    // New navigation property for the many-to-many relationship with Topping
     public ICollection<OrderLineToppingMapping> OrderLineToppings { get; set; }
 
     [Required]
     public Size Size { get; set; }
 
-    // Navigation properties to represent the relationships
     public Order Order { get; set; }
     public MenuItem MenuItem { get; set; }
     

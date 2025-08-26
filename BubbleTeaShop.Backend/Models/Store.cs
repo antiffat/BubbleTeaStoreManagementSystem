@@ -22,7 +22,6 @@ public class Store
     // const is implicitly static, since I do not intend to change the value of it runtime, const is the best choice.
     public const string Currency = "PLN";
 
-    // Navigation property for the many-to-many relationship with MenuItem
     public ICollection<MenuItem> MenuItems { get; set; }
     
     public ICollection<AssignmentHistory> AssignmentHistories { get; set; }

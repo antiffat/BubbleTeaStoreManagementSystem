@@ -23,9 +23,7 @@ public abstract class MenuItem
 
     public ICollection<MenuItemAllergen> MenuItemAllergens { get; set; } 
 
-    // Navigation property for the relationship with OrderLine
     public ICollection<OrderLine> OrderLines { get; set; }
     
-    // Navigation property for the many-to-many relationship with Store
     public ICollection<Store> Stores { get; set; }
 }

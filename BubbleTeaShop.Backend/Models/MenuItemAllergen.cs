@@ -14,6 +14,5 @@ public class MenuItemAllergen
     [MaxLength(50)]
     public string Name { get; set; }
 
-    // Navigation property for the many-to-many relationship with MenuItem
     public ICollection<MenuItem> MenuItems { get; set; }
 }

@@ -21,10 +21,8 @@ public class Shift
     [Required]
     public DayOfWeek DayOfWeek { get; set; }
 
-    // Navigation property for the worksIn association (many-to-many)
     public ICollection<Employee> Employees { get; set; }
 
-    // Foreign key for the manages association (one-to-many)
     [ForeignKey("ManagingEmployee")]
     public int? ManagingEmployeeId { get; set; } 
     public Employee? ManagingEmployee { get; set; }

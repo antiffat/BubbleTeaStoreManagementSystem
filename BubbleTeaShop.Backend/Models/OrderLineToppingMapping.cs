@@ -7,8 +7,7 @@ namespace BubbleTeaShop.Backend.Models;
 public class OrderLineToppingMapping
 {
     public int OrderLineId { get; set; }
-    public Topping Topping { get; set; } // The enum value itself can be part of the key
+    public Topping Topping { get; set; }
 
-    // Navigation properties for the many-to-many relationship
     public OrderLine OrderLine { get; set; }
 }

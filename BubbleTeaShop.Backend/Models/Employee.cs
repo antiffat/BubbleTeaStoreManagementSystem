@@ -16,7 +16,7 @@ public class Employee
     public string FullName { get; set; }
 
     [Required]
-    [MaxLength(9)] // Max length to accommodate phone number
+    [MaxLength(9)] 
     public string Phone { get; set; }
 
     [Required]
@@ -30,19 +30,15 @@ public class Employee
     [Required]
     public float Salary { get; set; }
 
-    // Optional properties based on role
     public int? HygieneScore { get; set; }
     public int? RegisterProficiency { get; set; }
     public int? TrainingSessionsConducted { get; set; }
 
-    // Navigation properties for relationships
     public ICollection<AssignmentHistory> AssignmentHistories { get; set; }
     public ICollection<EmployeeCertificate> EmployeeCertificates { get; set; }
     public ICollection<EmployeeRoleMapping> EmployeeRoles { get; set; }
     
-    // Navigation property for the worksIn association (many-to-many)
     public ICollection<Shift> WorksInShifts { get; set; }
     
-    // Navigation property for the manages association (one-to-many, reverse navigation)
     public ICollection<Shift> ManagedShifts { get; set; }
 }
