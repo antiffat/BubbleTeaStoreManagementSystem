@@ -1,6 +1,0 @@
-/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/obj/Debug/net8.0/BubbleTesShop.Backend.csproj.AssemblyReference.cache
-/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/obj/Debug/net8.0/BubbleTesShop.Backend.GeneratedMSBuildEditorConfig.editorconfig
-/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/obj/Debug/net8.0/BubbleTesShop.Backend.AssemblyInfoInputs.cache
-/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/obj/Debug/net8.0/BubbleTesShop.Backend.AssemblyInfo.cs
-/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/obj/Debug/net8.0/BubbleTesShop.Backend.csproj.CoreCompileInputs.cache
-/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/obj/Debug/net8.0/BubbleTesShop.Backend.sourcelink.json

@@ -1,7 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BubbleTeaShop.Backend.Models;
 
-namespace BubbleTesShop.Backend.Models;
+namespace BubbleTeaShop.Backend.Models;
 
 public class EmployeeCertificate
 {

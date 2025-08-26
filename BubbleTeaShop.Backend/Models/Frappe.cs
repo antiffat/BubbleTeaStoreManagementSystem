@@ -1,6 +1,7 @@
 using BubbleTesShop.Backend.Enums;
+using BubbleTesShop.Backend.Models;
 
-namespace BubbleTesShop.Backend.Models;
+namespace BubbleTeaShop.Backend.Models;
 
 public class Frappe : MenuItem
 {

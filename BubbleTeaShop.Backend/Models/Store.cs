@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BubbleTesShop.Backend.Models;
+namespace BubbleTeaShop.Backend.Models;
 
 public class Store
 {

@@ -1,12 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFrameworks>net8.0;net8.0-maccatalyst</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>BubbleTesShop.Backend</RootNamespace>
+        <RootNamespace>BubbleTeaShop.Backend</RootNamespace>
+        <OutputType>Library</OutputType>
+        <RootNamespace>BubbleTeaShop.Backend</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Include Program_Standalone.cs only if building for console -->
+        <Compile Include="Program_Standalone.cs" Condition="'$(BUILD_CONSOLE)' == 'true'" />
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.19" />

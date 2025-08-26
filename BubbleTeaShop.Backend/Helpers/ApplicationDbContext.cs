@@ -1,7 +1,8 @@
+using BubbleTeaShop.Backend.Models;
 using BubbleTesShop.Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BubbleTesShop.Backend.Helpers;
+namespace BubbleTeaShop.Backend.Helpers;
 
 public class ApplicationDbContext : DbContext
 {

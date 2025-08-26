@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BubbleTesShop.Backend.Models;
 
-namespace BubbleTesShop.Backend.Models;
+namespace BubbleTeaShop.Backend.Models;
 
 public abstract class MenuItem
 {

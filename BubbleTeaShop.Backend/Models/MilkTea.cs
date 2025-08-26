@@ -1,6 +1,7 @@
+using BubbleTeaShop.Backend.Models;
 using BubbleTesShop.Backend.Enums;
 
-namespace BubbleTesShop.Backend.Models;
+namespace BubbleTeaShop.Backend.Models;
 
 public class MilkTea : MenuItem
 {

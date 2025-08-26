@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/BubbleTeaShop.Client.app/Contents/MonoBundle/libe_sqlite3.dylib

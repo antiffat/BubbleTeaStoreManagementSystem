@@ -1,7 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using BubbleTesShop.Backend.Models;
 
-namespace BubbleTesShop.Backend.Models;
+namespace BubbleTeaShop.Backend.Models;
 
 public class AssignmentHistory
 {

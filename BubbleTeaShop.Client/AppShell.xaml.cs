@@ -1,20 +1,17 @@
-﻿using BubbleTesShop.Backend.Helpers;
+﻿using Microsoft.Maui.Controls;
 
-// Create a service collection to register services.
-var services = new ServiceCollection();
+namespace BubbleTeaShop.Client;
 
-// Add the DbContext to the service collection.
-// We are using a simple hard-coded connection string for migrations.
-services.AddDbContext<ApplicationDbContext>(options =>
+public partial class AppShell : Shell
 {
-    options.UseSqlite("Data Source=BubbleTeaShop.db");
-    
-    // Enable detailed SQL query logging for debugging.
-    options.LogTo(Console.WriteLine, LogLevel.Information);
-    options.EnableSensitiveDataLogging();
-});
+    public AppShell()
+    {
+        InitializeComponent();
 
-// Build the service provider. This is all the EF Core tools need to run migrations.
-var serviceProvider = services.BuildServiceProvider();
-
-Console.WriteLine("EF Core services for migrations configured successfully.");
+        // Example: navigate to a simple ContentPage
+        Items.Add(new ShellContent
+        {
+            Content = new MainPage()
+        });
+    }
+}

@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using BubbleTeaShop.Backend.Models;
 using BubbleTesShop.Backend.Enums;
 using Microsoft.EntityFrameworkCore;
 
-namespace BubbleTesShop.Backend.Models;
+namespace BubbleTeaShop.Backend.Models;
 
 public class EmployeeRoleMapping
 {
