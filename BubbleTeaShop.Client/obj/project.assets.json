@@ -3083,7 +3083,7 @@
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -3093,10 +3093,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -6176,7 +6176,7 @@
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -6186,10 +6186,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -9269,7 +9269,7 @@
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -9279,10 +9279,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -12362,7 +12362,7 @@
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -12372,10 +12372,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -15455,7 +15455,7 @@
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -15465,10 +15465,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -18548,7 +18548,7 @@
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -18558,10 +18558,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -21641,7 +21641,7 @@
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -21651,10 +21651,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -22948,7 +22948,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -22958,10 +22958,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -24249,7 +24249,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -24259,10 +24259,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -25550,7 +25550,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -25560,10 +25560,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -26851,7 +26851,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -26861,10 +26861,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -28152,7 +28152,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -28162,10 +28162,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -29453,7 +29453,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -29463,10 +29463,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -30754,7 +30754,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -30764,10 +30764,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -32131,7 +32131,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -32141,10 +32141,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -33423,7 +33423,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -33433,10 +33433,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -34715,7 +34715,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -34725,10 +34725,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -36007,7 +36007,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -36017,10 +36017,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -37299,7 +37299,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -37309,10 +37309,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -38588,7 +38588,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -38598,10 +38598,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     },
@@ -39880,7 +39880,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "BubbleTesShop.Backend/1.0.0": {
+      "BubbleTeaShop.Backend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -39890,10 +39890,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BubbleTesShop.Backend.dll": {}
+          "bin/placeholder/BubbleTeaShop.Backend.dll": {}
         }
       }
     }
@@ -44634,15 +44634,15 @@
         "xamarin.kotlinx.coroutines.core.jvm.nuspec"
       ]
     },
-    "BubbleTesShop.Backend/1.0.0": {
+    "BubbleTeaShop.Backend/1.0.0": {
       "type": "project",
-      "path": "../BubbleTesShop.Backend/BubbleTesShop.Backend.csproj",
-      "msbuildProject": "../BubbleTesShop.Backend/BubbleTesShop.Backend.csproj"
+      "path": "../BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj",
+      "msbuildProject": "../BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-android34.0": [
-      "BubbleTesShop.Backend >= 1.0.0",
+      "BubbleTeaShop.Backend >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.19",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.19",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.19",
@@ -44655,7 +44655,7 @@
       "Microsoft.NET.ILLink.Tasks >= 8.0.17"
     ],
     "net8.0-ios18.0": [
-      "BubbleTesShop.Backend >= 1.0.0",
+      "BubbleTeaShop.Backend >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.19",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.19",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.19",
@@ -44668,7 +44668,7 @@
       "Microsoft.NET.ILLink.Tasks >= 8.0.17"
     ],
     "net8.0-maccatalyst18.0": [
-      "BubbleTesShop.Backend >= 1.0.0",
+      "BubbleTeaShop.Backend >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.19",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.19",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.19",
@@ -44710,24 +44710,24 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "projectReferences": {
-            "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj": {
-              "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj"
+            "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj": {
+              "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj"
             }
           }
         },
         "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
           "projectReferences": {
-            "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj": {
-              "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj"
+            "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj": {
+              "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj"
             }
           }
         },
         "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
           "projectReferences": {
-            "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj": {
-              "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTesShop.Backend/BubbleTesShop.Backend.csproj"
+            "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj": {
+              "projectPath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Backend/BubbleTeaShop.Backend.csproj"
             }
           }
         }

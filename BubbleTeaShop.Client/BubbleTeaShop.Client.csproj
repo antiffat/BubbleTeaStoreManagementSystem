@@ -72,7 +72,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\BubbleTesShop.Backend\BubbleTesShop.Backend.csproj" />
+	  <ProjectReference Include="..\BubbleTeaShop.Backend\BubbleTeaShop.Backend.csproj" />
 	</ItemGroup>
 
 </Project>
