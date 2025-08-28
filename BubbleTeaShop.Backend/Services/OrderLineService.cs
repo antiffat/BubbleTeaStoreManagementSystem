@@ -138,7 +138,7 @@ public class OrderLineService : IOrderLineService
         await _orderLineRepository.UpdateOrderLineAsync(existing);
     }
 
-    private double CalculateItemTotalPrice(OrderLine ol)
+    public double CalculateItemTotalPrice(OrderLine ol)
     {
         if (ol != null && ol.MenuItem != null)
             return ol.ItemTotalPrice;

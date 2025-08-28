@@ -14,5 +14,6 @@ public interface IOrderLineService
     Task UpdateQuantityAsync(int orderLineId, int newQuantity);
     Task<IEnumerable<OrderLineDto>> GetOrderLinesByMenuItemIdAsync(int menuItemId);
     Task<IEnumerable<OrderLineDto>> GetOrderLinesByOrderIdAsync(int orderId);
-    
+    double CalculateItemTotalPrice(OrderLine ol);
+
 }
