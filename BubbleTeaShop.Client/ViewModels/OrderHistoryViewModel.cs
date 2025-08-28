@@ -49,6 +49,7 @@ public partial class OrderHistoryViewModel : ObservableObject
             }
         }
 
+        [RelayCommand]
         private async Task ExecuteCreateOrderAsync()
         {
             // CustomizeOrderLineViewModel.ClearCurrentOrderItems();

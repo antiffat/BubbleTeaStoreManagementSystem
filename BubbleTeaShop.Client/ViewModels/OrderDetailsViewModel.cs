@@ -53,7 +53,8 @@ public partial class OrderDetailsViewModel : ObservableObject
     [RelayCommand]
     private async Task Ok()
     {
-        await Shell.Current.GoToAsync("//MainPage");
+        await Shell.Current.GoToAsync("..");
+        
     }
 
     [RelayCommand]

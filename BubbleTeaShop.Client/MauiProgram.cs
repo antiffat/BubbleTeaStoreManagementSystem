@@ -58,12 +58,15 @@ public static class MauiProgram
         builder.Services.AddScoped<IAssignmentHistoryService, AssignmentHistoryService>();
         builder.Services.AddScoped<IEmployeeService, EmployeeService>();
         builder.Services.AddScoped<IShiftService, ShiftService>();
-
+        
         builder.Services.AddTransient<OrderHistoryViewModel>();
         builder.Services.AddTransient<MainPage>();
         
         builder.Services.AddTransient<OrderDetailsViewModel>();
         builder.Services.AddTransient<OrderDetailsPage>();
+
+        builder.Services.AddTransient<SelectCategoryViewModel>();
+        builder.Services.AddTransient<SelectCategoryPage>();
         
         builder.Services.AddTransient<AppShell>(sp => 
         {
