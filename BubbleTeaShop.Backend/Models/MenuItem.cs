@@ -13,7 +13,7 @@ public abstract class MenuItem
 
     [Required]
     [MaxLength(100)]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     [Required]
     public double BasePrice { get; set; }
