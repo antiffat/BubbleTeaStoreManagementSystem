@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:BubbleTeaShop.Client.ViewModels"
+             xmlns:models="clr-namespace:BubbleTeaShop.Backend.Models;assembly=BubbleTeaShop.Backend"
+             xmlns:converters="clr-namespace:BubbleTeaShop.Client.ViewModels"
+             xmlns:dtOs="clr-namespace:BubbleTesShop.Backend.DTOs;assembly=BubbleTeaShop.Backend"
+             x:Class="BubbleTeaShop.Client.Views.OrderDetailsPage"
+             x:DataType="viewModels:OrderDetailsViewModel"
+             Title="Order Details"
+             BackgroundColor="#F5F5F5">
+
+    <Grid RowDefinitions="Auto, *, Auto" Padding="20">
+        <VerticalStackLayout Grid.Row="0" HorizontalOptions="Center" Margin="0,0,0,20">
+            <Label Text="Order Details"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#00796B" HorizontalOptions="Center"/>
+            <Label Text="{Binding CurrentOrder.OrderDateTime, StringFormat='Order Date: {0:yyyy-MM-dd HH:mm}'}"
+                   FontSize="16"
+                   TextColor="#333333"
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,0"/>
+            <Label Text="{Binding CurrentOrder.Status, StringFormat='Status: {0}'}"
+                   FontSize="16"
+                   TextColor="#333333"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="15">
+                <Label Text="Items in this Order:"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="#333333"
+                       Margin="0,0,0,5"/>
+
+                <CollectionView ItemsSource="{Binding OrderLinesDisplay}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="dtOs:OrderLineDto">
+                            <Frame BackgroundColor="White" CornerRadius="10" Padding="15" Margin="0,0,0,10" HasShadow="True">
+                                <VerticalStackLayout Spacing="5">
+                                    <Label Text="{Binding MenuItemName}" FontSize="20" FontAttributes="Bold" TextColor="#004D40"/>
+                                    <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
+                                        <Label Grid.Row="0" Grid.Column="0" Text="Base Price:" FontSize="15" TextColor="#555555"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding BasePrice, StringFormat='{0:C}'}" HorizontalOptions="End" FontSize="15" TextColor="#555555"/>
+
+                                        <Label Grid.Row="1" Grid.Column="0" Text="Quantity:" FontSize="15" TextColor="#555555"/>
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Quantity}" HorizontalOptions="End" FontSize="15" TextColor="#555555"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Text="Size:" FontSize="15" TextColor="#555555"/>
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Size}" HorizontalOptions="End" FontSize="15" TextColor="#555555"/>
+
+                                        <Label Grid.Row="3" Grid.Column="0" Text="Toppings:" FontSize="15" TextColor="#555555"/>
+                                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding Toppings, Converter={StaticResource ListToCommaSeparatedConverter}}" HorizontalOptions="End" FontSize="15" TextColor="#555555"/>
+
+                                        <BoxView Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="1" Color="#EEEEEE" Margin="0,5,0,0"/>
+
+                                        <Label Grid.Row="5" Grid.Column="0" Text="Item Total:" FontSize="16" FontAttributes="Bold" TextColor="#00796B"/>
+                                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding ItemTotalPrice, StringFormat='{0:C}'}" HorizontalOptions="End" FontSize="16" FontAttributes="Bold" TextColor="#00796B"/>
+                                    </Grid>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Frame BackgroundColor="#E0F7FA" CornerRadius="10" Padding="15" HasShadow="True" Margin="0,10,0,0">
+                    <Grid ColumnDefinitions="*, *">
+                        <Label Grid.Column="0" Text="Order Total:" FontSize="22" FontAttributes="Bold" TextColor="#D32F2F"/>
+                        <Label Grid.Column="1" Text="{Binding CurrentOrder.OrderTotalPrice, StringFormat='{0:C}'}" HorizontalOptions="End" FontSize="22" FontAttributes="Bold" TextColor="#D32F2F"/>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Button Grid.Row="2"
+                Text="OK"
+                Command="{Binding OkCommand}"
+                HorizontalOptions="FillAndExpand"
+                Margin="0,20,0,0"
+                BackgroundColor="#4CAF50" TextColor="White"
+                FontSize="18"
+                CornerRadius="10"/>
+    </Grid>
+</ContentPage>

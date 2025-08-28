@@ -144,7 +144,7 @@ public class OrderLineService : IOrderLineService
             return ol.ItemTotalPrice;
 
         // just in case
-        double basePrice = ol?.MenuItem?.BasePrice ?? 0.0;
+        double basePrice = ol.MenuItem?.BasePrice ?? 0.0;
         double total = basePrice * (ol?.Quantity ?? 0);
 
         if (ol?.Size == Size.M)
@@ -166,6 +166,7 @@ public class OrderLineService : IOrderLineService
             OrderId = ol.OrderId,
             MenuItemId = ol.MenuItemId,
             MenuItemName = ol.MenuItem?.Name,
+            BasePrice = ol.MenuItem?.BasePrice ?? 0.0,
             Quantity = ol.Quantity,
             Size = ol.Size,
             Toppings = ol.OrderLineToppings?.Select(t => t.Topping).ToList() ?? new List<Topping>(),

@@ -1,5 +1,6 @@
 ﻿using BubbleTeaShop.Backend.Helpers;
 using BubbleTeaShop.Client.ViewModels;
+using BubbleTeaShop.Client.Views;
 using BubbleTesShop.Backend.Repositories;
 using BubbleTesShop.Backend.Services;
 using Microsoft.EntityFrameworkCore;
@@ -60,7 +61,16 @@ public static class MauiProgram
 
         builder.Services.AddTransient<OrderHistoryViewModel>();
         builder.Services.AddTransient<MainPage>();
-        builder.Services.AddSingleton<AppShell>();
+        
+        builder.Services.AddTransient<OrderDetailsViewModel>();
+        builder.Services.AddTransient<OrderDetailsPage>();
+        
+        builder.Services.AddTransient<AppShell>(sp => 
+        {
+            var mainPage = sp.GetRequiredService<MainPage>();
+            return new AppShell(mainPage);
+        });
+        
         var app = builder.Build();
 
         using (var scope = app.Services.CreateScope())

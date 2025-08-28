@@ -199,6 +199,7 @@ public class OrderService : IOrderService
                 OrderId = ol.OrderId,
                 MenuItemId = ol.MenuItemId,
                 MenuItemName = ol.MenuItem?.Name,
+                BasePrice = ol.MenuItem?.BasePrice ?? 0.0,
                 Quantity = ol.Quantity,
                 Size = ol.Size,
                 Toppings = ol.OrderLineToppings?.Select(t => t.Topping).ToList() ?? new List<Topping>(),

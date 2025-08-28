@@ -57,18 +57,24 @@ public partial class OrderHistoryViewModel : ObservableObject
 
         private async Task ExecuteViewDetailsAsync(OrderDto selectedOrder)
         {
+            Console.WriteLine($"View Details clicked for order: {selectedOrder?.Id}");
+    
             if (selectedOrder == null)
             {
                 await Shell.Current.DisplayAlert("Error", "No order selected for details.", "OK");
                 return;
             }
 
-            var navParams = new Dictionary<string, object>
+            try
             {
-                { "OrderId", selectedOrder.Id }
-            };
-
-            await Shell.Current.GoToAsync("OrderDetailsPage", navParams);
+                await Shell.Current.GoToAsync($"OrderDetailsPage?OrderId={selectedOrder.Id}");
+                Console.WriteLine("Navigation attempted");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Navigation error: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error", $"Cannot navigate: {ex.Message}", "OK");
+            }
         }
 
         private async Task ExecuteChangeStatusAsync(OrderDto orderDto)
