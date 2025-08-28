@@ -83,7 +83,7 @@ public class ApplicationDbContext : DbContext
 
         // -------------------- ASSOCIATION WITH ATTRIBUTE (AssignmentHistory) ----------------------------------
         modelBuilder.Entity<AssignmentHistory>()
-            .HasKey(ah => new { ah.StoreId, ah.EmployeeId, ah.StartDate });
+            .HasKey(ah => ah.Id);
 
         modelBuilder.Entity<AssignmentHistory>()
             .HasOne(ah => ah.Store)
@@ -319,7 +319,7 @@ public class ApplicationDbContext : DbContext
         
         // Seed AssignmentHistory
         modelBuilder.Entity<AssignmentHistory>().HasData(
-            new AssignmentHistory { StoreId = 1, EmployeeId = 1, StartDate = DateTime.Parse("2024-06-01T00:00:00Z"), EndDate = DateTime.Parse("2024-08-01T00:00:00Z") }
+            new AssignmentHistory { Id = -1, StoreId = 1, EmployeeId = 1, StartDate = DateTime.Parse("2024-06-01T00:00:00Z"), EndDate = DateTime.Parse("2024-08-01T00:00:00Z") }
         );
 
         // Seed Shifts

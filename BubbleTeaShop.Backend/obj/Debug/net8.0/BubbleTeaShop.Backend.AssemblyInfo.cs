@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BubbleTeaShop.Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e45b689d5422ac95b8f1a0b326501ccae0ba144")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e82a31c2d0774b24ec8cacf93a0c95f07f6e5550")]
 [assembly: System.Reflection.AssemblyProductAttribute("BubbleTeaShop.Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BubbleTeaShop.Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
