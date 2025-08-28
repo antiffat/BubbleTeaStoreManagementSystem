@@ -55,4 +55,12 @@ public class MenuItemRepository : IMenuItemRepository
     {
         return await _context.MenuItems.AnyAsync(mi => mi.Id == id);
     }
+    
+    public async Task<List<MenuItem>> GetMenuItemsByIdsAsync(IEnumerable<int> ids)
+    {
+        var idList = ids.Distinct().ToList();
+        return await _context.MenuItems
+            .Where(mi => idList.Contains(mi.Id))
+            .ToListAsync();
+    }
 }

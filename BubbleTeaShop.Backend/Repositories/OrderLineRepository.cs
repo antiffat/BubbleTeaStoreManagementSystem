@@ -94,4 +94,27 @@ public class OrderLineRepository : IOrderLineRepository
             .Include(ol => ol.OrderLineToppings)
             .FirstOrDefaultAsync(ol => ol.Id == id);
     }
+    
+    public async Task<bool> TryDeleteOrderLineIfOrderHasMoreThanOneAsync(int orderLineId)
+    {
+        using var tx = await _context.Database.BeginTransactionAsync(System.Data.IsolationLevel.Serializable);
+        var ol = await _context.OrderLines
+            .Where(x => x.Id == orderLineId)
+            .Include(x => x.Order)
+            .ThenInclude(o => o.OrderLines)
+            .FirstOrDefaultAsync();
+
+        if (ol == null) return false;
+
+        if (ol.Order == null)
+            throw new InvalidOperationException("Data integrity error: parent order missing");
+
+        if (ol.Order.OrderLines?.Count <= 1)
+            throw new InvalidOperationException("Cannot delete last orderline of an order.");
+
+        _context.OrderLines.Remove(ol);
+        await _context.SaveChangesAsync();
+        await tx.CommitAsync();
+        return true;
+    }
 }

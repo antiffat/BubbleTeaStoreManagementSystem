@@ -103,20 +103,10 @@ public class OrderLineService : IOrderLineService
 
     public async Task DeleteOrderLineAsync(int id)
     {
-        var orderLine = await _orderLineRepository.GetOrderLineWithOrderAndOrderLinesAsync(id);
-        if (orderLine == null)
+        var deleted = await _orderLineRepository.TryDeleteOrderLineIfOrderHasMoreThanOneAsync(id);
+
+        if (!deleted)
             throw new KeyNotFoundException("OrderLine with given ID does not exist.");
-
-        var order = orderLine.Order;
-        if (order == null)
-            throw new InvalidOperationException("Data integrity error: OrderLine has no parent Order.");
-
-        // 1..* - order must have at least one order line
-        var orderLineCount = order.OrderLines?.Count ?? 0;
-        if (orderLineCount <= 1)
-            throw new InvalidOperationException("Cannot delete the last OrderLine of an Order. Orders must have at least one OrderLine.");
-
-        await _orderLineRepository.DeleteOrderLineAsync(id);
     }
     
     public async Task<double> GetItemTotalPriceAsync(int orderLineId)

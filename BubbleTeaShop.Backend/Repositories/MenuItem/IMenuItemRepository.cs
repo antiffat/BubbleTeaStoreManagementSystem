@@ -10,4 +10,5 @@ public interface IMenuItemRepository
     Task UpdateMenuItemAsync(MenuItem menuItem);
     Task DeleteMenuItemAsync(int id);
     Task<bool> MenuItemExistsAsync(int id);
+    Task<List<MenuItem>> GetMenuItemsByIdsAsync(IEnumerable<int> ids);
 }

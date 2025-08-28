@@ -15,4 +15,6 @@ public interface IOrderLineRepository
     Task<bool> OrderLineExistsMenuItemOrderAsync(int menuItemId, int orderId);
 
     Task<OrderLine> GetOrderLineWithOrderAndOrderLinesAsync(int id);
+
+    Task<bool> TryDeleteOrderLineIfOrderHasMoreThanOneAsync(int orderLineId);
 }
