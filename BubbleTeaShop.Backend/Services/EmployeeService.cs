@@ -6,7 +6,7 @@ using BubbleTesShop.Backend.Repositories;
 
 namespace BubbleTesShop.Backend.Services;
 
-public class EmployeeService
+public class EmployeeService : IEmployeeService
 {
     private readonly IEmployeeRepository _employeeRepository;
     private readonly IAssignmentHistoryRepository _assignmentHistoryRepository;
@@ -35,7 +35,7 @@ public class EmployeeService
         return MapToDto(e);
     }
 
-    public async Task<int> AddEmployeeAsync(AddEmployeeDto dto)
+    public async Task<int> CreateEmployeeAsync(AddEmployeeDto dto)
     {
         ValidatePhone(dto.Phone);
         ValidateOptionalRanges(dto.HygieneScore, dto.RegisterProficiency);
