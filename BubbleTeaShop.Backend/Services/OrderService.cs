@@ -111,8 +111,78 @@ public class OrderService : IOrderService
         if (!await _orderRepository.OrderExistsAsync(id))
             throw new KeyNotFoundException("Order with given ID does not exist.");
         
+        var ols = await _orderLineRepository.GetOrderLineByOrderIdAsync(id);
+        if (ols.Any())
+            throw new InvalidOperationException("Cannot delete employee who still has assignment histories.");
+
+
         await _orderRepository.DeleteOrderAsync(id);
     }
+    
+    // STATEEEEEE
+    private void EnsureNotFinal(Order order)
+    {
+        if (order.Status == OrderStatus.COMPLETED || order.Status == OrderStatus.CANCELLED)
+            throw new InvalidOperationException("Cannot change status of an order that is Completed or Cancelled.");
+    }
+
+    private async Task<Order> LoadExistingOrderOrThrow(int orderId)
+    {
+        if (!await _orderRepository.OrderExistsAsync(orderId))
+            throw new KeyNotFoundException("Order with given ID does not exist.");
+
+        var order = await _orderRepository.GetOrderByIdAsync(orderId);
+        if (order == null)
+            throw new KeyNotFoundException("Order with given ID does not exist.");
+
+        return order;
+    }
+
+    public async Task ChangeToAcceptedAsync(int orderId)
+    {
+        var order = await LoadExistingOrderOrThrow(orderId);
+        EnsureNotFinal(order);
+        order.Status = OrderStatus.ACCEPTED;
+        await _orderRepository.UpdateOrderAsync(order);
+    }
+
+    public async Task ChangeToInProgressAsync(int orderId)
+    {
+        var order = await LoadExistingOrderOrThrow(orderId);
+        EnsureNotFinal(order);
+        order.Status = OrderStatus.IN_PROGRESS;
+        await _orderRepository.UpdateOrderAsync(order);
+    }
+
+    public async Task ChangeToReadyToPickupAsync(int orderId)
+    {
+        var order = await LoadExistingOrderOrThrow(orderId);
+        EnsureNotFinal(order);
+        order.Status = OrderStatus.READY_TO_PICKUP;
+        await _orderRepository.UpdateOrderAsync(order);
+    }
+
+    public async Task ChangeToCompletedAsync(int orderId)
+    {
+        var order = await LoadExistingOrderOrThrow(orderId);
+        if (order.Status == OrderStatus.CANCELLED)
+            throw new InvalidOperationException("Cannot complete an order that has been cancelled.");
+
+        order.Status = OrderStatus.COMPLETED;
+        await _orderRepository.UpdateOrderAsync(order);
+    }
+
+    public async Task ChangeToCancelledAsync(int orderId)
+    {
+        var order = await LoadExistingOrderOrThrow(orderId);
+
+        if (order.Status == OrderStatus.COMPLETED)
+            throw new InvalidOperationException("Cannot cancel an order that is already completed.");
+
+        order.Status = OrderStatus.CANCELLED;
+        await _orderRepository.UpdateOrderAsync(order);
+    }
+
 
     private OrderDto MapToDto(Order order)
     {
