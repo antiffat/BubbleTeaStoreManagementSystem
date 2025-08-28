@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BubbleTeaShop.Backend.Models;
 
+// join table
 public class MenuItemAllergen
 {
     [Key]
