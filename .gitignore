@@ -1,0 +1,51 @@
+# Visual Studio and Rider
+.vs/
+.idea/
+
+# Binaries
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Rr]esharper/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Build results
+[Tt]emp/
+[Rr]esults/
+
+# NuGet
+*.nupkg
+.nuget/
+.nupkg/
+packages/
+**/project.assets.json
+*.nuget.g.props
+*.nuget.g.targets
+
+# Logs
+*.log
+log/
+
+# Test results
+TestResults/
+
+# MAUI specifics
+.maui/
+MauiApp.csproj.user
+
+# EF Core migrations and database files
+[Mm]igrations/
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# Other
+Thumbs.db
