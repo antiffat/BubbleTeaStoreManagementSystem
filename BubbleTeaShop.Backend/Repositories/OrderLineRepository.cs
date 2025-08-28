@@ -82,4 +82,16 @@ public class OrderLineRepository : IOrderLineRepository
     {
         return await _context.OrderLines.AnyAsync(ol => ol.MenuItemId == menuItemId && ol.OrderId == orderId);
     }
+    
+    // 
+    public async Task<OrderLine> GetOrderLineWithOrderAndOrderLinesAsync(int id)
+    {
+        return await _context.OrderLines
+            .Where(ol => ol.Id == id)
+            .Include(ol => ol.MenuItem)
+            .Include(ol => ol.Order)
+            .ThenInclude(o => o.OrderLines) // <- important: includes order.OrderLines so we can check count in memory
+            .Include(ol => ol.OrderLineToppings)
+            .FirstOrDefaultAsync(ol => ol.Id == id);
+    }
 }
