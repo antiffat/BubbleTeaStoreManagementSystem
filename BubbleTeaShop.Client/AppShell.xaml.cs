@@ -1,17 +1,16 @@
-﻿using Microsoft.Maui.Controls;
+﻿using BubbleTeaShop.Client.ViewModels;
+using Microsoft.Maui.Controls;
 
 namespace BubbleTeaShop.Client;
 
 public partial class AppShell : Shell
 {
-    public AppShell()
+    public AppShell(MainPage mainPage)
     {
         InitializeComponent();
-
-        // Example: navigate to a simple ContentPage
         Items.Add(new ShellContent
         {
-            Content = new MainPage()
+            Content = mainPage
         });
     }
 }

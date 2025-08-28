@@ -1,24 +1,22 @@
-﻿namespace BubbleTeaShop.Client;
+﻿using BubbleTeaShop.Client.ViewModels;
+
+namespace BubbleTeaShop.Client;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	private readonly OrderHistoryViewModel _vm;
 
-	public MainPage()
+	public MainPage(OrderHistoryViewModel vm)
 	{
 		InitializeComponent();
+		_vm = vm;
+		BindingContext = _vm;
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	protected override async void OnAppearing()
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		base.OnAppearing();
+		await _vm.InitializeAsync();
 	}
 }
 

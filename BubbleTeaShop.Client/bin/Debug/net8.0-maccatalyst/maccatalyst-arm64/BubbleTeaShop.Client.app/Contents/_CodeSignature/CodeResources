@@ -51,28 +51,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XHo1HmtdQDjRK3qTEJE/z5IWm+DiV8QxJZCUXUbBIBk=
+			VQQSH4kZ/CV5Kh3z7pvo9KOYUtIvh/smpz18mVcLM/c=
 			</data>
 		</dict>
 		<key>MonoBundle/BubbleTeaShop.Backend.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OtZSnIr+gltyXl/VN6ygYeSjCagOpAMH4o9bGbcRlBI=
+			52ddjSsDymEB3ugXRDSe4ml2vxElv5bCLsPqnY4oEHs=
 			</data>
 		</dict>
 		<key>MonoBundle/BubbleTeaShop.Client.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Cw5QSM0shf/fmrTnq9m3sJH9u6hl27biXxkWmLFvX0=
+			zy78sa1sRUjcLL9K4UAQSTb6IgV48k/H2xo4k81n7+c=
 			</data>
 		</dict>
 		<key>MonoBundle/BubbleTeaShop.Client.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YmYEsQwzJBNkyKhGT6P+urmAvdDKIxeFxlqtVqOiNn4=
+			zfKls/2qoloIIQ65FVV1srXNkJJaRo2q0x1TbbM2fGc=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Mvvm.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fX61wGbP6IO0ObEgC/Xcs4ex5TGd0u29qp4jrf5BZFI=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -1479,7 +1486,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ClgxdDgai/5fRFxE3YsR7qnxyOqn/2VnWCe+XC1mkXs=
+			lYYgBUL4F92an+TjfXEcGU3H9o//TTkKqHHtgb4AJV0=
 			</data>
 		</dict>
 		<key>MonoBundle/ar/Microsoft.Maui.Controls.resources.dll</key>
@@ -1689,7 +1696,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mrVKur+qwfaMwKllouKU6xS/hR71Oql3IhYK5K784+A=
+			Bhx7QCdP8CoAjSLMAoIdHtkEON/n+aRwXD/8nyTNiwE=
 			</data>
 		</dict>
 		<key>MonoBundle/sk/Microsoft.Maui.Controls.resources.dll</key>

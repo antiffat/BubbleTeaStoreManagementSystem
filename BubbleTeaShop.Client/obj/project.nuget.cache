@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CVDCU6ILCHg=",
+  "dgSpecHash": "uc2CkU63abE=",
   "success": true,
   "projectFilePath": "/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/BubbleTeaShop.Client.csproj",
   "expectedPackageFiles": [
+    "/Users/antiffat/.nuget/packages/communitytoolkit.mvvm/8.4.0/communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "/Users/antiffat/.nuget/packages/microsoft.data.sqlite.core/8.0.19/microsoft.data.sqlite.core.8.0.19.nupkg.sha512",
     "/Users/antiffat/.nuget/packages/microsoft.entityframeworkcore/8.0.19/microsoft.entityframeworkcore.8.0.19.nupkg.sha512",
     "/Users/antiffat/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.19/microsoft.entityframeworkcore.abstractions.8.0.19.nupkg.sha512",

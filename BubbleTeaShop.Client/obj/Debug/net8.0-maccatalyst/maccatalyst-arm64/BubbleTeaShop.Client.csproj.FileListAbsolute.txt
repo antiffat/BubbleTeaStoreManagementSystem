@@ -1,6 +1,7 @@
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/BubbleTeaShop.Client.runtimeconfig.json
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/BubbleTeaShop.Client.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/BubbleTeaShop.Client.pdb
+/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/CommunityToolkit.Mvvm.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/Microsoft.Data.Sqlite.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/Microsoft.EntityFrameworkCore.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -320,6 +321,7 @@
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/BubbleTeaShop.Client.genruntimeconfig.cache
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/ref/BubbleTeaShop.Client.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/BubbleTeaShop.Backend.stamp
+/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/CommunityToolkit.Mvvm.stamp
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.CSharp.stamp
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.Data.Sqlite.stamp
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/resourcestamps/Microsoft.EntityFrameworkCore.Abstractions.stamp

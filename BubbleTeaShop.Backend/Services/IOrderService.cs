@@ -11,4 +11,9 @@ public interface IOrderService
     Task<int> CreateOrderAsync(AddOrderDto dto);
     Task UpdateOrderAsync(UpdateOrderDto dto);
     Task DeleteOrderAsync(int id);
+    Task ChangeToAcceptedAsync(int orderId);
+    Task ChangeToInProgressAsync(int orderId);
+    Task ChangeToReadyToPickupAsync(int orderId);
+    Task ChangeToCompletedAsync(int orderId);
+    Task ChangeToCancelledAsync(int orderId);
 }

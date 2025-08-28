@@ -34,6 +34,7 @@
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../BubbleTeaShop.Client.app/Contents/MonoBundle/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../BubbleTeaShop.Client.app/Contents/MonoBundle/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../BubbleTeaShop.Client.app/Contents/MonoBundle/runtimeconfig.bin
+/Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../BubbleTeaShop.Client.app/Contents/MonoBundle/CommunityToolkit.Mvvm.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../BubbleTeaShop.Client.app/Contents/MonoBundle/Microsoft.Data.Sqlite.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../BubbleTeaShop.Client.app/Contents/MonoBundle/Microsoft.EntityFrameworkCore.dll
 /Users/antiffat/semester_6/MAS/BubbleTeaShopManagementSystem/BubbleTeaShop.Client/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../BubbleTeaShop.Client.app/Contents/MonoBundle/Microsoft.EntityFrameworkCore.Abstractions.dll
