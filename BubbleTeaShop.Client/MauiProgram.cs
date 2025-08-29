@@ -73,6 +73,9 @@ public static class MauiProgram
 
         builder.Services.AddTransient<CustomizeOrderLineViewModel>();
         builder.Services.AddTransient<CustomizeOrderLinePage>();
+
+        builder.Services.AddTransient<OrderDetailsSummaryViewModel>();
+        builder.Services.AddTransient<OrderDetailsSummaryPage>();
         
         builder.Services.AddTransient<AppShell>(sp => 
         {

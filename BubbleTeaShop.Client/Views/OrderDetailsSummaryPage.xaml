@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:orderDtos="clr-namespace:BubbleTesShop.Backend.DTOs.OrderDtos;assembly=BubbleTeaShop.Backend"
+             xmlns:viewmodels="clr-namespace:BubbleTeaShop.Client.ViewModels"
+             xmlns:dtOs="clr-namespace:BubbleTesShop.Backend.DTOs;assembly=BubbleTeaShop.Backend"
+             x:Class="BubbleTeaShop.Client.Views.OrderDetailsSummaryPage"
+             Title="Order Details Summary">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+        <Label
+            Text="Order Summary"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            Margin="20"
+            Grid.Row="0"
+            TextColor="Black"/>
+
+        <ScrollView Grid.Row="1" Margin="10">
+            <VerticalStackLayout Spacing="10" Padding="5">
+                <CollectionView ItemsSource="{Binding OrderSummaryItems}" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="dtOs:OrderLineDto">
+                            <Frame Margin="5" Padding="10" CornerRadius="8" BackgroundColor="#F0F8FF" HasShadow="True">
+                                <VerticalStackLayout Spacing="5">
+                                    <Label Text="{Binding MenuItemName}" FontSize="18" FontAttributes="Bold" TextColor="#006064"/>
+                                    <Grid ColumnDefinitions="*, *" RowDefinitions="Auto, Auto, Auto">
+                                        <Label Grid.Row="0" Grid.Column="0" Text="Base Price:" FontSize="14" TextColor="Black"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding BasePrice, StringFormat='{0:C}'}" HorizontalOptions="End" FontSize="14" TextColor="Black"/>
+
+                                        <Label Grid.Row="1" Grid.Column="0" Text="Quantity:" FontSize="14" TextColor="Black"/>
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Quantity}" HorizontalOptions="End" FontSize="14" TextColor="Black"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Text="Size:" FontSize="14" TextColor="Black"/>
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Size}" HorizontalOptions="End" FontSize="14" TextColor="Black"/>
+                                    </Grid>
+                                    <Label Text="Toppings:" FontSize="14" TextColor="Black"/>
+                                    <Label Text="{Binding Toppings, Converter={StaticResource ListToCommaSeparatedConverter}}"
+                                           FontSize="14" FontAttributes="Italic" TextColor="Black" Margin="10,0,0,0"/>
+
+                                    <BoxView HeightRequest="1" Color="#CCCCCC" Margin="0,5"/>
+
+                                    <Grid ColumnDefinitions="*, *">
+                                        <Label Grid.Column="0" Text="Item Total:" FontSize="16" FontAttributes="Bold" TextColor="#00838F"/>
+                                        <Label Grid.Column="1" Text="{Binding ItemTotalPrice, StringFormat='{0:C}'}" HorizontalOptions="End" FontSize="16" FontAttributes="Bold" TextColor="#00838F"/>
+                                    </Grid>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Frame BackgroundColor="#E0F7FA" CornerRadius="10" Padding="15" HasShadow="True" Margin="5">
+                    <Grid ColumnDefinitions="*, *">
+                        <Label Grid.Column="0" Text="Order Total:" FontSize="20" FontAttributes="Bold" TextColor="#D32F2F"/>
+                        <Label Grid.Column="1" Text="{Binding OrderTotalPrice, StringFormat='{0:C}'}" HorizontalOptions="End" FontSize="20" FontAttributes="Bold" TextColor="#D32F2F"/>
+                    </Grid>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid Grid.Row="2" ColumnDefinitions="*, *" Margin="20,10" ColumnSpacing="10">
+            <Button Grid.Column="0" Text="Cancel" Command="{Binding CancelCommand}" BackgroundColor="#D32F2F" TextColor="White" CornerRadius="10" Padding="15,10"/>            
+            <Button Grid.Column="1" Text="OK" Command="{Binding PlaceFinalOrderCommand}" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="10" Padding="15,10"/>
+        </Grid>
+    </Grid>
+</ContentPage>

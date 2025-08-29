@@ -73,7 +73,6 @@ public partial class CustomizeOrderLineViewModel : ObservableObject
 
     private async void ExecuteCancel()
     {
-        ClearCurrentOrderItems();
         await Shell.Current.GoToAsync("//MainPage");
     }
 
@@ -179,7 +178,7 @@ public partial class CustomizeOrderLineViewModel : ObservableObject
             return;
         }
 
-        await Shell.Current.GoToAsync("ReviewOrderPage");
+        await Shell.Current.GoToAsync("OrderDetailsSummaryPage");
     }
 
     private async Task DisplayAlert(string title, string message, string cancel)

@@ -107,8 +107,7 @@ public partial class SelectMenuItemViewModel : ObservableObject
 
     private async void ExecuteCancel()
     {
-        Debug.WriteLine("Cancel command executed");
-        await Shell.Current.GoToAsync("..");
+        await Shell.Current.GoToAsync("//MainPage");
     }
 
     private async Task DisplayAlert(string title, string message, string cancel)

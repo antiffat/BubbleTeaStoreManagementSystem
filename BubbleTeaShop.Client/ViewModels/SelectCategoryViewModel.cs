@@ -50,6 +50,6 @@ public partial class SelectCategoryViewModel : ObservableObject
 
     private async void ExecuteCancel()
     {
-        await Shell.Current.GoToAsync("//MainPage"); 
+        await Shell.Current.GoToAsync($"//{nameof(MainPage)}"); 
     }
 }
