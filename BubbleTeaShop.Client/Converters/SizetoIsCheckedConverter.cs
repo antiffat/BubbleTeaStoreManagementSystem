@@ -1,9 +1,9 @@
 using System.Globalization;
 using Size = BubbleTeaShop.Backend.Enums.Size;
 
-namespace BubbleTeaShop.Client.ViewModels;
+namespace BubbleTeaShop.Client.Converters;
 
-public class SizetoIsCheckedConverter
+public class SizeToIsCheckedConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {

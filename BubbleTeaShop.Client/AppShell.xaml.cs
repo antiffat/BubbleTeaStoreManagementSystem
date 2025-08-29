@@ -8,8 +8,10 @@ public partial class AppShell : Shell
 {
     public AppShell(MainPage mainPage)
     {
-        Routing.RegisterRoute(nameof(OrderDetailsPage), typeof(OrderDetailsPage));
-        Routing.RegisterRoute(nameof(SelectCategoryPage), typeof(SelectCategoryPage));
+        Routing.RegisterRoute("OrderDetailsPage", typeof(OrderDetailsPage));
+        Routing.RegisterRoute("SelectCategoryPage", typeof(SelectCategoryPage));
+        Routing.RegisterRoute("SelectMenuItemPage", typeof(SelectMenuItemPage));
+        Routing.RegisterRoute("CustomizeOrderLinePage", typeof(CustomizeOrderLinePage));
         Items.Add(new ShellContent
         {
             Content = mainPage

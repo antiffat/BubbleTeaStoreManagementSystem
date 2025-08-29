@@ -68,6 +68,12 @@ public static class MauiProgram
         builder.Services.AddTransient<SelectCategoryViewModel>();
         builder.Services.AddTransient<SelectCategoryPage>();
         
+        builder.Services.AddTransient<SelectMenuItemViewModel>();
+        builder.Services.AddTransient<SelectMenuItemPage>();
+
+        builder.Services.AddTransient<CustomizeOrderLineViewModel>();
+        builder.Services.AddTransient<CustomizeOrderLinePage>();
+        
         builder.Services.AddTransient<AppShell>(sp => 
         {
             var mainPage = sp.GetRequiredService<MainPage>();

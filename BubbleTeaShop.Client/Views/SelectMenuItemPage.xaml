@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:BubbleTeaShop.Client.ViewModels"
+             xmlns:dto="clr-namespace:BubbleTesShop.Backend.DTOs.MenuItemDtos;assembly=BubbleTeaShop.Backend"
+             xmlns:converters="clr-namespace:BubbleTeaShop.Client.Converters"
+             x:Class="BubbleTeaShop.Client.Views.SelectMenuItemPage"
+             Title="Select Menu Item">
+
+    <ContentPage.Resources>
+        <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+    </ContentPage.Resources>
+    
+    <Grid RowDefinitions="Auto, *, Auto">
+        <Label 
+            Text="Select Menu Item"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            Margin="20"
+            Grid.Row="0"/>
+
+        <ActivityIndicator 
+            Grid.Row="1"
+            IsVisible="{Binding IsLoading}"
+            IsRunning="{Binding IsLoading}"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Color="{StaticResource Primary}"/>
+
+        <CollectionView 
+            Grid.Row="1"
+            ItemsSource="{Binding MenuItems}"
+            SelectionMode="None"
+            IsVisible="{Binding IsLoading, Converter={StaticResource InverseBooleanConverter}}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="dto:MenuItemDto">
+                    <Frame Margin="10,5" Padding="15" CornerRadius="10" BackgroundColor="#F0F8FF" HasShadow="True">
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10" VerticalOptions="CenterAndExpand">
+                            <VerticalStackLayout Grid.Column="0" VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding Name}" 
+                                       FontSize="18" FontAttributes="Bold" TextColor="#333333"/>
+                                <Label Text="{Binding BasePrice, StringFormat='Price: {0:C}'}" 
+                                       FontSize="14" TextColor="#555555"/>
+                                <Label Text="{Binding StockQuantity, StringFormat='Stock: {0}'}" 
+                                       FontSize="14" TextColor="#555555"/>
+                                <Label Text="{Binding ItemType, StringFormat='Type: {0}'}" 
+                                       FontSize="12" TextColor="#777777"/>
+                            </VerticalStackLayout>
+                            
+                            <Button Grid.Column="1"
+                                    Text="Select"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:SelectMenuItemViewModel}}, Path=SelectMenuItemCommand}"
+                                    CommandParameter="{Binding .}"
+                                    BackgroundColor="#00838F"
+                                    TextColor="White"
+                                    CornerRadius="8"
+                                    Padding="10,5"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Grid.Row="2"
+                Text="Cancel"
+                Command="{Binding CancelCommand}"
+                BackgroundColor="#D32F2F"
+                TextColor="White"
+                CornerRadius="10"
+                Padding="15,10"
+                Margin="20"
+                HorizontalOptions="End"
+                VerticalOptions="End"/>
+    </Grid>
+</ContentPage>
