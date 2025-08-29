@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using BubbleTeaShop.Backend.DTOs.OrderDtos;
 using BubbleTeaShop.Backend.DTOs.OrderLineDtos;
 using BubbleTeaShop.Backend.Enums;
@@ -199,7 +200,19 @@ public async Task ChangeToCancelledAsync(int orderId)
     private OrderDto MapToDto(Order order)
     {
         if (order == null) return null;
+        Debug.WriteLine($"MapToDto: Order {order.Id} has {order.OrderLines?.Count ?? 0} lines");
 
+        foreach (var ol in order.OrderLines ?? Enumerable.Empty<OrderLine>())
+        {
+            Debug.WriteLine($"  OL {ol.Id} toppings count (entity): {ol.OrderLineToppings?.Count ?? 0}");
+            if (ol.OrderLineToppings != null)
+            {
+                foreach (var t in ol.OrderLineToppings)
+                {
+                    Debug.WriteLine($"    raw topping type: {t.Topping.GetType().FullName} value: {(int)(object)t.Topping} name: {t.Topping.ToString()}");
+                }
+            }
+        }
         return new OrderDto
         {
             Id = order.Id,

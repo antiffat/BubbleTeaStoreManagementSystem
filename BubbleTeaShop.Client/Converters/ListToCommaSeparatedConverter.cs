@@ -4,9 +4,9 @@ using System.Collections;
 using System.Globalization; 
 using System.Linq;     
 
-namespace BubbleTeaShop.Client.ViewModels;
+namespace BubbleTeaShop.Client.Converters;
 
-public class ListToCommaSeperatedConverter : IValueConverter
+public class ListToCommaSeparatedConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {

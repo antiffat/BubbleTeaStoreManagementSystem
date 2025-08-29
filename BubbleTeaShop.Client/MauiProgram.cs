@@ -1,4 +1,5 @@
-﻿using BubbleTeaShop.Backend.Helpers;
+﻿using System.Diagnostics;
+using BubbleTeaShop.Backend.Helpers;
 using BubbleTeaShop.Backend.Repositories;
 using BubbleTeaShop.Backend.Repositories.MenuItem;
 using BubbleTeaShop.Backend.Services;
@@ -24,9 +25,18 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        var dbPath = Path.Combine(
-            FileSystem.AppDataDirectory, 
-            "BubbleTeaShop.db");
+        var envPath = Environment.GetEnvironmentVariable("BUBBLE_DB");
+        string dbPath;
+        if (!string.IsNullOrEmpty(envPath) && File.Exists(envPath))
+        {
+            dbPath = envPath;
+            Debug.WriteLine($"[DEBUG] Using DB from BUBBLE_DB: {dbPath}");
+        }
+        else
+        {
+            dbPath = Path.Combine(FileSystem.AppDataDirectory, "BubbleTeaShop.db");
+            Debug.WriteLine($"[DEBUG] Using app container DB: {dbPath}");
+        }
 
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
         {

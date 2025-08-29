@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using BubbleTeaShop.Backend.Enums;
@@ -8,9 +9,14 @@ public class ToppingToIsCheckedConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value is ObservableCollection<Topping> selectedToppings && parameter is Topping topping)
+        if (parameter is not Topping topping) return false;
+        
+        if (value is IEnumerable enumVal)
         {
-            return selectedToppings.Contains(topping);
+            foreach (var item in enumVal)
+            {
+                if (item is Topping t && t == topping) return true;
+            }
         }
         return false;
     }

@@ -2,7 +2,7 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BubbleTeaShop.Client"
-             xmlns:converters="clr-namespace:BubbleTeaShop.Client.ViewModels"
+             xmlns:converters="clr-namespace:BubbleTeaShop.Client.Converters"
              x:Class="BubbleTeaShop.Client.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -11,7 +11,7 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
             
-            <converters:ListToCommaSeperatedConverter x:Key="ListToCommaSeparatedConverter" />
+            <converters:ListToCommaSeparatedConverter x:Key="ListToCommaSeparatedConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

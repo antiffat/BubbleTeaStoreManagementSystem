@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace BubbleTeaShop.Client.ViewModels;
+namespace BubbleTeaShop.Client.Converters;
 
 public class IntToStringConverter
 {
