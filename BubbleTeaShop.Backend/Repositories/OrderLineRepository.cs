@@ -16,6 +16,7 @@ public class OrderLineRepository : IOrderLineRepository
     public async Task<IEnumerable<OrderLine>> GetAllOrderLinesAsync()
     {
         return await _context.OrderLines
+            .AsSplitQuery() 
             .Include(ol => ol.MenuItem)
             .Include(ol => ol.Order)
             .Include(ol => ol.OrderLineToppings)
@@ -25,6 +26,7 @@ public class OrderLineRepository : IOrderLineRepository
     public async Task<OrderLine> GetOrderLineByIdAsync(int id)
     {
         return await _context.OrderLines
+            .AsSplitQuery() 
             .Include(ol => ol.MenuItem)
             .Include(ol => ol.Order)
             .Include(ol => ol.OrderLineToppings)
@@ -61,6 +63,7 @@ public class OrderLineRepository : IOrderLineRepository
     public async Task<IEnumerable<OrderLine>> GetOrderLineByMenuItemIdAsync(int menuItemId)
     {
         return await _context.OrderLines
+            .AsSplitQuery() 
             .Where(ol => ol.MenuItemId == menuItemId)
             .Include(ol => ol.MenuItem)
             .Include(ol => ol.Order)
@@ -71,6 +74,7 @@ public class OrderLineRepository : IOrderLineRepository
     public async Task<IEnumerable<OrderLine>> GetOrderLineByOrderIdAsync(int orderId)
     {
         return await _context.OrderLines
+            .AsSplitQuery() 
             .Where(ol => ol.OrderId == orderId)
             .Include(ol => ol.MenuItem)
             .Include(ol => ol.Order)
@@ -87,6 +91,7 @@ public class OrderLineRepository : IOrderLineRepository
     public async Task<OrderLine> GetOrderLineWithOrderAndOrderLinesAsync(int id)
     {
         return await _context.OrderLines
+            .AsSplitQuery() 
             .Where(ol => ol.Id == id)
             .Include(ol => ol.MenuItem)
             .Include(ol => ol.Order)

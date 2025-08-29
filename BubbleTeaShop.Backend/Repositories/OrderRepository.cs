@@ -16,6 +16,7 @@ public class OrderRepository : IOrderRepository
     public async Task<IEnumerable<Order>> GetAllOrdersAsync()
     {
         return await _context.Orders
+            .AsSplitQuery() 
             .Include(o => o.OrderLines)
             .ThenInclude(ol => ol.MenuItem)
             .Include(o => o.OrderLines)
@@ -26,6 +27,7 @@ public class OrderRepository : IOrderRepository
     public async Task<Order> GetOrderByIdAsync(int id)
     {
         return await _context.Orders
+            .AsSplitQuery()
             .Include(o => o.OrderLines)
             .ThenInclude(ol => ol.MenuItem)
             .Include(o => o.OrderLines)

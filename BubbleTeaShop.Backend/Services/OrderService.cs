@@ -137,51 +137,61 @@ public class OrderService : IOrderService
 
         return order;
     }
-
-    public async Task ChangeToAcceptedAsync(int orderId)
+    
+    private void EnsureCorrectTransition(Order order, OrderStatus expectedFromStatus, OrderStatus toStatus)
     {
-        var order = await LoadExistingOrderOrThrow(orderId);
-        EnsureNotFinal(order);
-        order.Status = OrderStatus.ACCEPTED;
-        await _orderRepository.UpdateOrderAsync(order);
-    }
-
-    public async Task ChangeToInProgressAsync(int orderId)
+    if (order.Status != expectedFromStatus)
     {
-        var order = await LoadExistingOrderOrThrow(orderId);
-        EnsureNotFinal(order);
-        order.Status = OrderStatus.IN_PROGRESS;
-        await _orderRepository.UpdateOrderAsync(order);
+        throw new InvalidOperationException($"Cannot change status from {order.Status} to {toStatus}. The order must be in the {expectedFromStatus} state.");
     }
+}
 
-    public async Task ChangeToReadyToPickupAsync(int orderId)
+public async Task ChangeToAcceptedAsync(int orderId)
+{
+    var order = await LoadExistingOrderOrThrow(orderId);
+    EnsureCorrectTransition(order, OrderStatus.PENDING, OrderStatus.ACCEPTED);
+    order.Status = OrderStatus.ACCEPTED;
+    await _orderRepository.UpdateOrderAsync(order);
+}
+
+public async Task ChangeToInProgressAsync(int orderId)
+{
+    var order = await LoadExistingOrderOrThrow(orderId);
+    EnsureCorrectTransition(order, OrderStatus.ACCEPTED, OrderStatus.IN_PROGRESS);
+    order.Status = OrderStatus.IN_PROGRESS;
+    await _orderRepository.UpdateOrderAsync(order);
+}
+
+public async Task ChangeToReadyToPickupAsync(int orderId)
+{
+    var order = await LoadExistingOrderOrThrow(orderId);
+    EnsureCorrectTransition(order, OrderStatus.IN_PROGRESS, OrderStatus.READY_TO_PICKUP);
+    order.Status = OrderStatus.READY_TO_PICKUP;
+    await _orderRepository.UpdateOrderAsync(order);
+}
+
+public async Task ChangeToCompletedAsync(int orderId)
+{
+    var order = await LoadExistingOrderOrThrow(orderId);
+    EnsureCorrectTransition(order, OrderStatus.READY_TO_PICKUP, OrderStatus.COMPLETED);
+    order.Status = OrderStatus.COMPLETED;
+    await _orderRepository.UpdateOrderAsync(order);
+}
+
+public async Task ChangeToCancelledAsync(int orderId)
+{
+    var order = await LoadExistingOrderOrThrow(orderId);
+    
+    // The diagram shows transitions from PENDING and ACCEPTED to CANCELLED.
+    if (order.Status != OrderStatus.PENDING && order.Status != OrderStatus.ACCEPTED)
     {
-        var order = await LoadExistingOrderOrThrow(orderId);
-        EnsureNotFinal(order);
-        order.Status = OrderStatus.READY_TO_PICKUP;
-        await _orderRepository.UpdateOrderAsync(order);
+        // An exception is thrown if the current state is not one of the allowed states.
+        throw new InvalidOperationException($"Cannot cancel an order from the {order.Status} state. It must be in PENDING or ACCEPTED.");
     }
-
-    public async Task ChangeToCompletedAsync(int orderId)
-    {
-        var order = await LoadExistingOrderOrThrow(orderId);
-        if (order.Status == OrderStatus.CANCELLED)
-            throw new InvalidOperationException("Cannot complete an order that has been cancelled.");
-
-        order.Status = OrderStatus.COMPLETED;
-        await _orderRepository.UpdateOrderAsync(order);
-    }
-
-    public async Task ChangeToCancelledAsync(int orderId)
-    {
-        var order = await LoadExistingOrderOrThrow(orderId);
-
-        if (order.Status == OrderStatus.COMPLETED)
-            throw new InvalidOperationException("Cannot cancel an order that is already completed.");
-
-        order.Status = OrderStatus.CANCELLED;
-        await _orderRepository.UpdateOrderAsync(order);
-    }
+    
+    order.Status = OrderStatus.CANCELLED;
+    await _orderRepository.UpdateOrderAsync(order);
+}
 
 
     private OrderDto MapToDto(Order order)
