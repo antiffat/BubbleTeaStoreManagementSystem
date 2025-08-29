@@ -1,7 +1,8 @@
+using BubbleTeaShop.Backend.DTOs.OrderLineDtos;
 using BubbleTeaShop.Backend.Models;
 using BubbleTesShop.Backend.DTOs;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public interface IOrderLineService
 {

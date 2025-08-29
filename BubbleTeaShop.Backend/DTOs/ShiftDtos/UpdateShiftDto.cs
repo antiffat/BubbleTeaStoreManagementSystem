@@ -1,5 +1,7 @@
+using DayOfWeek = BubbleTeaShop.Backend.Enums.DayOfWeek;
+
 namespace BubbleTesShop.Backend.DTOs.ShiftDtos;
-using DayOfWeek = BubbleTesShop.Backend.Enums.DayOfWeek;
+using DayOfWeek = DayOfWeek;
 
 
 public class UpdateShiftDto

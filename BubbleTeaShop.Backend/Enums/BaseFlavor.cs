@@ -1,4 +1,4 @@
-namespace BubbleTesShop.Backend.Enums;
+namespace BubbleTeaShop.Backend.Enums;
 
 public enum BaseFlavor
 {

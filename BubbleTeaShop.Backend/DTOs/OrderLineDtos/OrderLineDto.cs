@@ -1,7 +1,6 @@
 using BubbleTeaShop.Backend.Enums;
-using BubbleTesShop.Backend.Enums;
 
-namespace BubbleTesShop.Backend.DTOs;
+namespace BubbleTeaShop.Backend.DTOs.OrderLineDtos;
 
 public class OrderLineDto
 {

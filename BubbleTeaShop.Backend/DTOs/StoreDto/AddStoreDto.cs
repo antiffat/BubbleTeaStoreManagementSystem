@@ -1,4 +1,4 @@
-namespace BubbleTesShop.Backend.DTOs.StoreDto;
+namespace BubbleTeaShop.Backend.DTOs.StoreDto;
 
 public class AddStoreDto
 {

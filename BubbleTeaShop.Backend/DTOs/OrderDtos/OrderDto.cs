@@ -1,4 +1,7 @@
-namespace BubbleTesShop.Backend.DTOs.OrderDtos;
+using BubbleTeaShop.Backend.DTOs.OrderLineDtos;
+using BubbleTesShop.Backend.DTOs;
+
+namespace BubbleTeaShop.Backend.DTOs.OrderDtos;
 
 public class OrderDto
 {

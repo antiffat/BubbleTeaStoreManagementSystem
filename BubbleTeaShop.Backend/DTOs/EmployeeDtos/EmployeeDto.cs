@@ -1,7 +1,7 @@
-using BubbleTesShop.Backend.DTOs.AssignmentHistoryDtos;
-using BubbleTesShop.Backend.Enums;
+using BubbleTeaShop.Backend.DTOs.AssignmentHistoryDtos;
+using BubbleTeaShop.Backend.Enums;
 
-namespace BubbleTesShop.Backend.DTOs.EmployeeDtos;
+namespace BubbleTeaShop.Backend.DTOs.EmployeeDtos;
 
 public class EmployeeDto
 {

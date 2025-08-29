@@ -1,14 +1,12 @@
-using BubbleTeaShop.Backend.Models;
-
-namespace BubbleTesShop.Backend.Repositories;
+namespace BubbleTeaShop.Backend.Repositories.MenuItem;
 
 public interface IMenuItemRepository
 {
-    Task<IEnumerable<MenuItem>> GetAllMenuItemsAsync();
-    Task<MenuItem> GetMenuItemByIdAsync(int id);
-    Task AddMenuItemAsync(MenuItem menuItem);
-    Task UpdateMenuItemAsync(MenuItem menuItem);
+    Task<IEnumerable<Models.MenuItem>> GetAllMenuItemsAsync();
+    Task<Models.MenuItem> GetMenuItemByIdAsync(int id);
+    Task AddMenuItemAsync(Models.MenuItem menuItem);
+    Task UpdateMenuItemAsync(Models.MenuItem menuItem);
     Task DeleteMenuItemAsync(int id);
     Task<bool> MenuItemExistsAsync(int id);
-    Task<List<MenuItem>> GetMenuItemsByIdsAsync(IEnumerable<int> ids);
+    Task<List<Models.MenuItem>> GetMenuItemsByIdsAsync(IEnumerable<int> ids);
 }

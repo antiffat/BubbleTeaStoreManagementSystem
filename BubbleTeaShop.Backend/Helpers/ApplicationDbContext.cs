@@ -1,8 +1,8 @@
 using BubbleTeaShop.Backend.Enums;
 using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.Enums;
 using BubbleTesShop.Backend.Models;
 using Microsoft.EntityFrameworkCore;
+using DayOfWeek = BubbleTeaShop.Backend.Enums.DayOfWeek;
 
 namespace BubbleTeaShop.Backend.Helpers;
 
@@ -327,7 +327,7 @@ public class ApplicationDbContext : DbContext
             new Shift
             {
                 Id = 1,
-                DayOfWeek = BubbleTesShop.Backend.Enums.DayOfWeek.MONDAY,
+                DayOfWeek = DayOfWeek.MONDAY,
                 StartTime = new DateTime(2024, 7, 29, 9, 0, 0),
                 EndTime = new DateTime(2024, 7, 29, 17, 0, 0),
                 ManagingEmployeeId = 1
@@ -335,7 +335,7 @@ public class ApplicationDbContext : DbContext
             new Shift
             {
                 Id = 2,
-                DayOfWeek = BubbleTesShop.Backend.Enums.DayOfWeek.TUESDAY,
+                DayOfWeek = DayOfWeek.TUESDAY,
                 StartTime = new DateTime(2024, 7, 30, 10, 0, 0),
                 EndTime = new DateTime(2024, 7, 30, 18, 0, 0),
                 ManagingEmployeeId = 2

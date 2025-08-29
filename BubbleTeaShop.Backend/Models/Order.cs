@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using BubbleTesShop.Backend.Enums;
-using BubbleTesShop.Backend.Models;
+using BubbleTeaShop.Backend.Enums;
+using BubbleTeaShop.Backend.Models;
 
 namespace BubbleTeaShop.Backend.Models;
 

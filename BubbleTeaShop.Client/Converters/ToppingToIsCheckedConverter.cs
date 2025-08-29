@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Globalization;
-using BubbleTesShop.Backend.Enums;
+using BubbleTeaShop.Backend.Enums;
 
 namespace BubbleTeaShop.Client.Converters;
 

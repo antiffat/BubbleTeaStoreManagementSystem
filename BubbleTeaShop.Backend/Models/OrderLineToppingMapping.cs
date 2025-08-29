@@ -1,5 +1,4 @@
-using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.Enums;
+using BubbleTeaShop.Backend.Enums;
 
 namespace BubbleTeaShop.Backend.Models;
 

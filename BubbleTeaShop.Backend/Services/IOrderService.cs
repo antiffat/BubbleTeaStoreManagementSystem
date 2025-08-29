@@ -1,8 +1,6 @@
-using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.DTOs;
-using BubbleTesShop.Backend.DTOs.OrderDtos;
+using BubbleTeaShop.Backend.DTOs.OrderDtos;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public interface IOrderService
 {

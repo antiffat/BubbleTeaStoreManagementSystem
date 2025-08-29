@@ -1,6 +1,6 @@
-using DayOfWeek = BubbleTesShop.Backend.Enums.DayOfWeek;
+using DayOfWeek = BubbleTeaShop.Backend.Enums.DayOfWeek;
 
-namespace BubbleTesShop.Backend.DTOs.ShiftDtos;
+namespace BubbleTeaShop.Backend.DTOs.ShiftDtos;
 
 public class ShiftDto
 {
@@ -10,5 +10,5 @@ public class ShiftDto
     public DayOfWeek DayOfWeek { get; set; }
     public List<int> EmployeeIds { get; set; } = new();
     public int? ManagingEmployeeId { get; set; }
-    public string ManagingEmployeeName { get; set; }
+    public string? ManagingEmployeeName { get; set; }
 }

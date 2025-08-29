@@ -5,6 +5,7 @@
              xmlns:models="clr-namespace:BubbleTeaShop.Backend.Models;assembly=BubbleTeaShop.Backend"
              xmlns:converters="clr-namespace:BubbleTeaShop.Client.ViewModels"
              xmlns:dtOs="clr-namespace:BubbleTesShop.Backend.DTOs;assembly=BubbleTeaShop.Backend"
+             xmlns:orderLineDtos="clr-namespace:BubbleTeaShop.Backend.DTOs.OrderLineDtos;assembly=BubbleTeaShop.Backend"
              x:Class="BubbleTeaShop.Client.Views.OrderDetailsPage"
              x:DataType="viewModels:OrderDetailsViewModel"
              Title="Order Details"
@@ -37,7 +38,7 @@
 
                 <CollectionView ItemsSource="{Binding OrderLinesDisplay}">
                     <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="dtOs:OrderLineDto">
+                        <DataTemplate x:DataType="orderLineDtos:OrderLineDto">
                             <Frame BackgroundColor="White" CornerRadius="10" Padding="15" Margin="0,0,0,10" HasShadow="True">
                                 <VerticalStackLayout Spacing="5">
                                     <Label Text="{Binding MenuItemName}" FontSize="20" FontAttributes="Bold" TextColor="#004D40"/>

@@ -1,6 +1,7 @@
+using BubbleTeaShop.Backend.DTOs.ShiftDtos;
 using BubbleTesShop.Backend.DTOs.ShiftDtos;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public interface IShiftService
 {

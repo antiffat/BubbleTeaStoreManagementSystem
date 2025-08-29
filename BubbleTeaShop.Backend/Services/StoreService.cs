@@ -1,9 +1,8 @@
+using BubbleTeaShop.Backend.DTOs.StoreDto;
 using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.DTOs.MenuItemDtos;
-using BubbleTesShop.Backend.DTOs.StoreDto;
-using BubbleTesShop.Backend.Repositories;
+using BubbleTeaShop.Backend.Repositories;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public class StoreService : IStoreService
 {

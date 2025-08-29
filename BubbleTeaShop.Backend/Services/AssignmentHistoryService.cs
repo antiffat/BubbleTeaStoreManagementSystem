@@ -1,8 +1,8 @@
+using BubbleTeaShop.Backend.DTOs.AssignmentHistoryDtos;
 using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.DTOs.AssignmentHistoryDtos;
-using BubbleTesShop.Backend.Repositories;
+using BubbleTeaShop.Backend.Repositories;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public class AssignmentHistoryService : IAssignmentHistoryService
 {

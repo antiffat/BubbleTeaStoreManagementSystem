@@ -2,7 +2,7 @@ using BubbleTeaShop.Backend.Helpers;
 using BubbleTeaShop.Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BubbleTesShop.Backend.Repositories;
+namespace BubbleTeaShop.Backend.Repositories.MenuItem;
 
 public class MilkTeaMenuItemRepository : IMilkTeaMenuItemRepository
 {

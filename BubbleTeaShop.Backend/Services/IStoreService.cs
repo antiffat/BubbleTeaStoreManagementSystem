@@ -1,6 +1,6 @@
-using BubbleTesShop.Backend.DTOs.StoreDto;
+using BubbleTeaShop.Backend.DTOs.StoreDto;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public interface IStoreService
 {

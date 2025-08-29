@@ -1,6 +1,6 @@
-using BubbleTesShop.Backend.DTOs.EmployeeDtos;
+using BubbleTeaShop.Backend.DTOs.EmployeeDtos;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public interface IEmployeeService
 {

@@ -1,7 +1,7 @@
+using BubbleTeaShop.Backend.DTOs.MenuItemDtos;
 using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.DTOs.MenuItemDtos;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public interface IMenuItemService
 {

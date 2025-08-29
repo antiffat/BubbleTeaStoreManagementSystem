@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using BubbleTesShop.Backend.DTOs.MenuItemDtos;
-using BubbleTesShop.Backend.Services;
+using BubbleTeaShop.Backend.DTOs.MenuItemDtos;
+using BubbleTeaShop.Backend.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 

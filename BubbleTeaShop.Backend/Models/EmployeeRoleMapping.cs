@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using BubbleTeaShop.Backend.Enums;
 using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace BubbleTeaShop.Backend.Models;

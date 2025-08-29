@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BubbleTeaShop.Backend.Models;
 using BubbleTesShop.Backend.Models;
 
 namespace BubbleTeaShop.Backend.Models;

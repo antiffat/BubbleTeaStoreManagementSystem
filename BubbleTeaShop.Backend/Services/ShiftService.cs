@@ -1,11 +1,11 @@
+using BubbleTeaShop.Backend.DTOs.ShiftDtos;
+using BubbleTeaShop.Backend.Enums;
 using BubbleTeaShop.Backend.Models;
+using BubbleTeaShop.Backend.Repositories;
 using BubbleTesShop.Backend.DTOs.ShiftDtos;
-using BubbleTesShop.Backend.Enums;
 using BubbleTesShop.Backend.Models;
-using BubbleTesShop.Backend.Repositories;
-using DayOfWeek = BubbleTesShop.Backend.Enums.DayOfWeek;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public class ShiftService : IShiftService
 {

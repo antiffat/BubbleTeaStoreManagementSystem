@@ -1,10 +1,12 @@
+using BubbleTeaShop.Backend.DTOs.OrderDtos;
+using BubbleTeaShop.Backend.DTOs.OrderLineDtos;
+using BubbleTeaShop.Backend.Enums;
 using BubbleTeaShop.Backend.Models;
+using BubbleTeaShop.Backend.Repositories;
+using BubbleTeaShop.Backend.Repositories.MenuItem;
 using BubbleTesShop.Backend.DTOs;
-using BubbleTesShop.Backend.DTOs.OrderDtos;
-using BubbleTesShop.Backend.Enums;
-using BubbleTesShop.Backend.Repositories;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public class OrderService : IOrderService
 {

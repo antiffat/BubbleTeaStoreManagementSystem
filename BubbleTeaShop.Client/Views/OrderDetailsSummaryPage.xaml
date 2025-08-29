@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:orderDtos="clr-namespace:BubbleTesShop.Backend.DTOs.OrderDtos;assembly=BubbleTeaShop.Backend"
              xmlns:viewmodels="clr-namespace:BubbleTeaShop.Client.ViewModels"
              xmlns:dtOs="clr-namespace:BubbleTesShop.Backend.DTOs;assembly=BubbleTeaShop.Backend"
+             xmlns:orderLineDtos="clr-namespace:BubbleTeaShop.Backend.DTOs.OrderLineDtos;assembly=BubbleTeaShop.Backend"
              x:Class="BubbleTeaShop.Client.Views.OrderDetailsSummaryPage"
              Title="Order Details Summary">
 
@@ -21,7 +21,7 @@
             <VerticalStackLayout Spacing="10" Padding="5">
                 <CollectionView ItemsSource="{Binding OrderSummaryItems}" SelectionMode="None">
                     <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="dtOs:OrderLineDto">
+                        <DataTemplate x:DataType="orderLineDtos:OrderLineDto">
                             <Frame Margin="5" Padding="10" CornerRadius="8" BackgroundColor="#F0F8FF" HasShadow="True">
                                 <VerticalStackLayout Spacing="5">
                                     <Label Text="{Binding MenuItemName}" FontSize="18" FontAttributes="Bold" TextColor="#006064"/>

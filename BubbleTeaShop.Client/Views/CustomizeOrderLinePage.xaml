@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:BubbleTeaShop.Client.Converters"
              xmlns:enums1="clr-namespace:BubbleTeaShop.Backend.Enums;assembly=BubbleTeaShop.Backend"
-             xmlns:enums2="clr-namespace:BubbleTesShop.Backend.Enums;assembly=BubbleTeaShop.Backend"
              x:Class="BubbleTeaShop.Client.Views.CustomizeOrderLinePage"
              x:Name="CustomizePage"
              Title="Customize Order">
@@ -94,7 +93,7 @@
                             ItemsSource="{Binding AvailableToppings}"
                             SelectionMode="None">
                             <CollectionView.ItemTemplate>
-                                <DataTemplate x:DataType="enums2:Topping">
+                                <DataTemplate x:DataType="enums1:Topping">
                                     <Grid Padding="5">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />

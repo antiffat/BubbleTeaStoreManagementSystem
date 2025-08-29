@@ -1,8 +1,7 @@
 using BubbleTeaShop.Backend.Helpers;
-using BubbleTeaShop.Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BubbleTesShop.Backend.Repositories;
+namespace BubbleTeaShop.Backend.Repositories.MenuItem;
 
 public class MenuItemRepository : IMenuItemRepository
 {
@@ -13,7 +12,7 @@ public class MenuItemRepository : IMenuItemRepository
         _context = context;
     }
     
-    public async Task<IEnumerable<MenuItem>> GetAllMenuItemsAsync()
+    public async Task<IEnumerable<Models.MenuItem>> GetAllMenuItemsAsync()
     {
         return await _context.MenuItems
             .Include(mi => mi.MenuItemAllergens)
@@ -21,7 +20,7 @@ public class MenuItemRepository : IMenuItemRepository
             .ToListAsync();
     }
     
-    public async Task<MenuItem> GetMenuItemByIdAsync(int id)
+    public async Task<Models.MenuItem> GetMenuItemByIdAsync(int id)
     {
         return await _context.MenuItems
             .Include(mi => mi.MenuItemAllergens)
@@ -29,13 +28,13 @@ public class MenuItemRepository : IMenuItemRepository
             .FirstOrDefaultAsync(mi => mi.Id == id);
     }
     
-    public async Task AddMenuItemAsync(MenuItem menuItem)
+    public async Task AddMenuItemAsync(Models.MenuItem menuItem)
     {
         await _context.MenuItems.AddAsync(menuItem);
         await _context.SaveChangesAsync();
     }
     
-    public async Task UpdateMenuItemAsync(MenuItem menuItem)
+    public async Task UpdateMenuItemAsync(Models.MenuItem menuItem)
     {
         _context.MenuItems.Update(menuItem);
         await _context.SaveChangesAsync();
@@ -56,7 +55,7 @@ public class MenuItemRepository : IMenuItemRepository
         return await _context.MenuItems.AnyAsync(mi => mi.Id == id);
     }
     
-    public async Task<List<MenuItem>> GetMenuItemsByIdsAsync(IEnumerable<int> ids)
+    public async Task<List<Models.MenuItem>> GetMenuItemsByIdsAsync(IEnumerable<int> ids)
     {
         var idList = ids.Distinct().ToList();
         return await _context.MenuItems

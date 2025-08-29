@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
-using BubbleTesShop.Backend.DTOs.OrderDtos;
-using BubbleTesShop.Backend.Enums;
-using BubbleTesShop.Backend.Services;
+using BubbleTeaShop.Backend.DTOs.OrderDtos;
+using BubbleTeaShop.Backend.Enums;
+using BubbleTeaShop.Backend.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 

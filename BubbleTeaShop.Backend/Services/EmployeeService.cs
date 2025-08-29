@@ -1,10 +1,10 @@
+using BubbleTeaShop.Backend.DTOs.AssignmentHistoryDtos;
+using BubbleTeaShop.Backend.DTOs.EmployeeDtos;
+using BubbleTeaShop.Backend.Enums;
 using BubbleTeaShop.Backend.Models;
-using BubbleTesShop.Backend.DTOs.AssignmentHistoryDtos;
-using BubbleTesShop.Backend.DTOs.EmployeeDtos;
-using BubbleTesShop.Backend.Enums;
-using BubbleTesShop.Backend.Repositories;
+using BubbleTeaShop.Backend.Repositories;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public class EmployeeService : IEmployeeService
 {

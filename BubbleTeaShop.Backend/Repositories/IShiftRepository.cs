@@ -1,6 +1,6 @@
 using BubbleTesShop.Backend.Models;
 
-namespace BubbleTesShop.Backend.Repositories;
+namespace BubbleTeaShop.Backend.Repositories;
 
 public interface IShiftRepository
 {

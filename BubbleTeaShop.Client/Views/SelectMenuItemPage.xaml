@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:BubbleTeaShop.Client.ViewModels"
-             xmlns:dto="clr-namespace:BubbleTesShop.Backend.DTOs.MenuItemDtos;assembly=BubbleTeaShop.Backend"
              xmlns:converters="clr-namespace:BubbleTeaShop.Client.Converters"
+             xmlns:dto="clr-namespace:BubbleTeaShop.Backend.DTOs.MenuItemDtos;assembly=BubbleTeaShop.Backend"
              x:Class="BubbleTeaShop.Client.Views.SelectMenuItemPage"
              Title="Select Menu Item">
 

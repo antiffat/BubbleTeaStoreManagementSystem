@@ -1,6 +1,5 @@
 using BubbleTeaShop.Client.ViewModels;
 using BubbleTeaShop.Backend.Enums;
-using BubbleTesShop.Backend.Enums;
 using Size = BubbleTeaShop.Backend.Enums.Size;
 
 namespace BubbleTeaShop.Client.Views;

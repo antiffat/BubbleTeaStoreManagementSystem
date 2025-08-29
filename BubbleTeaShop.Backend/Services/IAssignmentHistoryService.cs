@@ -1,7 +1,7 @@
 
-using BubbleTesShop.Backend.DTOs.AssignmentHistoryDtos;
+using BubbleTeaShop.Backend.DTOs.AssignmentHistoryDtos;
 
-namespace BubbleTesShop.Backend.Services;
+namespace BubbleTeaShop.Backend.Services;
 
 public interface IAssignmentHistoryService
 {

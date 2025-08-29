@@ -1,6 +1,6 @@
-using BubbleTesShop.Backend.Enums;
+using BubbleTeaShop.Backend.Enums;
 
-namespace BubbleTesShop.Backend.DTOs.MenuItemDtos;
+namespace BubbleTeaShop.Backend.DTOs.MenuItemDtos;
 
 public class FrappeDto : MenuItemDto
 {

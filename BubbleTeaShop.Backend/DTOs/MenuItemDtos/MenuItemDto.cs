@@ -1,4 +1,4 @@
-namespace BubbleTesShop.Backend.DTOs.MenuItemDtos;
+namespace BubbleTeaShop.Backend.DTOs.MenuItemDtos;
 
 public class MenuItemDto
 {

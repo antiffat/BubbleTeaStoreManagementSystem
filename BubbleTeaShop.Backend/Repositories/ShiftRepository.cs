@@ -2,7 +2,7 @@ using BubbleTeaShop.Backend.Helpers;
 using BubbleTesShop.Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BubbleTesShop.Backend.Repositories;
+namespace BubbleTeaShop.Backend.Repositories;
 
 public class ShiftRepository : IShiftRepository
 {

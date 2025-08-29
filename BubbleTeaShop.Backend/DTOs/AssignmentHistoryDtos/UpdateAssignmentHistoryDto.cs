@@ -1,4 +1,4 @@
-namespace BubbleTesShop.Backend.DTOs.AssignmentHistoryDtos;
+namespace BubbleTeaShop.Backend.DTOs.AssignmentHistoryDtos;
 
 public class UpdateAssignmentHistoryDto
 {

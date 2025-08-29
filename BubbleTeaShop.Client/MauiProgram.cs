@@ -1,8 +1,9 @@
 ﻿using BubbleTeaShop.Backend.Helpers;
+using BubbleTeaShop.Backend.Repositories;
+using BubbleTeaShop.Backend.Repositories.MenuItem;
+using BubbleTeaShop.Backend.Services;
 using BubbleTeaShop.Client.ViewModels;
 using BubbleTeaShop.Client.Views;
-using BubbleTesShop.Backend.Repositories;
-using BubbleTesShop.Backend.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 

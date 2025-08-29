@@ -1,6 +1,6 @@
 using BubbleTeaShop.Backend.Models;
 
-namespace BubbleTesShop.Backend.Repositories;
+namespace BubbleTeaShop.Backend.Repositories;
 
 public interface IOrderRepository
 {
