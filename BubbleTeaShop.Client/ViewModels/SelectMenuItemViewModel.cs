@@ -81,7 +81,6 @@ public partial class SelectMenuItemViewModel : ObservableObject
 
         Debug.WriteLine($"Selected menu item: {selectedItem.Name}");
 
-        // Check if item is available
         try
         {
             bool isAvailable = await _menuItemService.IsAvailableAsync(selectedItem.Id);
@@ -92,7 +91,6 @@ public partial class SelectMenuItemViewModel : ObservableObject
                 return;
             }
 
-            // Navigate to configure page with item details
             await Shell.Current.GoToAsync(
                 $"CustomizeOrderLinePage?MenuItemId={selectedItem.Id}" +
                 $"&MenuItemName={Uri.EscapeDataString(selectedItem.Name)}" +

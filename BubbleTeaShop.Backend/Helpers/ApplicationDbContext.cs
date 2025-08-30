@@ -36,28 +36,27 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Frappe>().ToTable("Frappes");
         modelBuilder.Entity<MilkTea>().ToTable("MilkTeas");
 
-        // Ensure MenuItemAllergen has its own table
         modelBuilder.Entity<MenuItemAllergen>().ToTable("MenuItemAllergens");
-
-        // Many-to-many MenuItem <-> MenuItemAllergen:
-        // Use a separate join table name to avoid colliding with MenuItemAllergens table.
+        
         modelBuilder.Entity<MenuItem>()
             .HasMany(mi => mi.MenuItemAllergens)
             .WithMany(a => a.MenuItems)
             .UsingEntity(j => j.ToTable("MenuItem_MenuItemAllergens"));
 
         // ---------------------------- ASSOCIATION WITH ATTRIBUTE (OrderLine) ----------------------------------
-        // OrderLine now uses a surrogate primary key (Id).
         modelBuilder.Entity<OrderLine>()
             .HasKey(ol => ol.Id);
 
-        // multi-value Toppings table and FK to OrderLine.Id
         modelBuilder.Entity<OrderLineToppingMapping>()
             .ToTable("OrderLineToppings");
 
         modelBuilder.Entity<OrderLineToppingMapping>()
             .HasKey(olt => new { olt.OrderLineId, olt.Topping });
 
+        modelBuilder.Entity<OrderLineToppingMapping>()
+            .Property(olt => olt.Topping)
+            .HasConversion<int>();
+        
         modelBuilder.Entity<OrderLineToppingMapping>()
             .HasOne(olt => olt.OrderLine)
             .WithMany(ol => ol.OrderLineToppings)
@@ -150,10 +149,8 @@ public class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<EmployeeCertificate>().ToTable("EmployeeCertificates");
 
-        // EmployeeRoleMapping: composite PK and map enum to column EmployeeRole
         modelBuilder.Entity<EmployeeRoleMapping>(entity =>
         {
-            // map to table and add check constraint via later call (or you can inline)
             entity.ToTable("EmployeeRoleMappings");
 
             entity.HasKey(e => new { e.EmployeeId, e.Role });
@@ -168,7 +165,6 @@ public class ApplicationDbContext : DbContext
                   .IsRequired();
         });
 
-        // Apply the check constraint for EmployeeRoleMapping table
         modelBuilder.Entity<EmployeeRoleMapping>()
             .ToTable(t => t.HasCheckConstraint("CK_EmployeeRoleMapping_EmployeeRole", "[EmployeeRole] BETWEEN 0 AND 2"));
 
@@ -197,7 +193,7 @@ public class ApplicationDbContext : DbContext
             .ToTable(t => t.HasCheckConstraint("CK_Shift_DayOfWeek", "[DayOfWeek] BETWEEN 0 AND 6"));
         
         
-        // SEED
+        // -------------------------------------- SEED ----------------------------------------
         modelBuilder.Entity<Store>().HasData(
             new Store { Id = 1, Name = "Bubble Heaven", Location = "123 Tea St, Warsaw, Poland" },
             new Store { Id = 2, Name = "The Brew Nook", Location = "456 Pearl Ave, Krakow, Poland" }

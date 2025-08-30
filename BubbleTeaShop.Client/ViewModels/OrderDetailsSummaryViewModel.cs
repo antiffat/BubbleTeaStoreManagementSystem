@@ -52,7 +52,6 @@ public partial class OrderDetailsSummaryViewModel : ObservableObject
 
             foreach (var addLine in current)
             {
-                // Try fetch menu item (for name/basePrice); fall back to placeholders if not present
                 MenuItemDto menuItem = null;
                 try
                 {
@@ -68,10 +67,8 @@ public partial class OrderDetailsSummaryViewModel : ObservableObject
 
                 var itemTotal = ComputeItemTotalPrice(basePrice, addLine.Quantity, addLine.Size, addLine.Toppings);
 
-                // Build an OrderLineDto for UI binding. DTOs are simple POCOs in your solution and are safe to use here.
                 var uiLine = new OrderLineDto
                 {
-                    // DTO fields used by UI - fill as needed
                     MenuItemId = addLine.MenuItemId,
                     MenuItemName = name,
                     BasePrice = basePrice,
@@ -116,7 +113,6 @@ public partial class OrderDetailsSummaryViewModel : ObservableObject
 
             try
             {
-                // Build AddOrderDto from the static CustomizeOrderLineViewModel list
                 var current = CustomizeOrderLineViewModel.GetCurrentOrderItems();
                 if (current == null || !current.Any())
                 {

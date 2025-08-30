@@ -27,6 +27,7 @@ public static class MauiProgram
 
         var envPath = Environment.GetEnvironmentVariable("BUBBLE_DB");
         string dbPath;
+
         if (!string.IsNullOrEmpty(envPath) && File.Exists(envPath))
         {
             dbPath = envPath;
@@ -35,9 +36,20 @@ public static class MauiProgram
         else
         {
             dbPath = Path.Combine(FileSystem.AppDataDirectory, "BubbleTeaShop.db");
-            Debug.WriteLine($"[DEBUG] Using app container DB: {dbPath}");
-        }
 
+            if (!File.Exists(dbPath))
+            {
+                using var stream = FileSystem.OpenAppPackageFileAsync("BubbleTeaShop.db").Result;
+                using var dest = File.Create(dbPath);
+                stream.CopyTo(dest);
+                Debug.WriteLine($"[DEBUG] Copied DB to app container: {dbPath}");
+            }
+            else
+            {
+                Debug.WriteLine($"[DEBUG] Using existing app container DB: {dbPath}");
+            }
+        }
+        
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
         {
             options.UseSqlite($"Data Source={dbPath}");

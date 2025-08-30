@@ -7,7 +7,7 @@ public class OrderDto
 {
     public int Id { get; set; }
     public DateTime OrderDateTime { get; set; }
-    public string Status { get; set; } // string for easier serialization
+    public string Status { get; set; } 
     public IEnumerable<OrderLineDto> OrderLines { get; set; }
     public double OrderTotalPrice { get; set; }
 }

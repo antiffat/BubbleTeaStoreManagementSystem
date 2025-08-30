@@ -25,7 +25,6 @@ public partial class OrderDetailsSummaryPage : ContentPage
         catch (Exception ex)
         {
             System.Diagnostics.Debug.WriteLine($"Error initializing OrderDetailsSummaryPage VM: {ex}");
-            // show friendly error to user
             if (Application.Current?.MainPage != null)
                 await Application.Current.MainPage.DisplayAlert("Error", $"Failed to load order summary: {ex.Message}", "OK");
         }

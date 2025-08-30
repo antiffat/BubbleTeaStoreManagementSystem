@@ -63,7 +63,8 @@ public class OrderService : IOrderService
                 MenuItemId = l.MenuItemId,
                 Quantity = l.Quantity,
                 Size = l.Size,
-                OrderLineToppings = l.Toppings?.Select(t => new OrderLineToppingMapping { Topping = t }).ToList()
+                OrderLineToppings = l.Toppings?.Select(t => new OrderLineToppingMapping { Topping = t }).ToList() 
+                                    ?? new List<OrderLineToppingMapping>()            
             }).ToList()
         };
 
@@ -185,10 +186,8 @@ public async Task ChangeToCancelledAsync(int orderId)
 {
     var order = await LoadExistingOrderOrThrow(orderId);
     
-    // The diagram shows transitions from PENDING and ACCEPTED to CANCELLED.
     if (order.Status != OrderStatus.PENDING && order.Status != OrderStatus.ACCEPTED)
     {
-        // An exception is thrown if the current state is not one of the allowed states.
         throw new InvalidOperationException($"Cannot cancel an order from the {order.Status} state. It must be in PENDING or ACCEPTED.");
     }
     

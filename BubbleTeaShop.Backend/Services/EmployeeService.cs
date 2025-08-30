@@ -68,7 +68,6 @@ public class EmployeeService : IEmployeeService
             Salary = dto.Salary,
         };
 
-        // role mappings (will be saved with employee by EF)
         if (roles.Any())
         {
             employee.EmployeeRoles = roles
@@ -244,7 +243,6 @@ public class EmployeeService : IEmployeeService
         };
     }
 
-    // small repo wrappers (keeps code readable / single place to adjust)
     private async Task _assignmentHistory_repository_add(AssignmentHistory ah) =>
         await _assignmentHistoryRepository.AddAssignmentHistoryAsync(ah);
 

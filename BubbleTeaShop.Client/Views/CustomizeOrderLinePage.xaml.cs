@@ -14,30 +14,6 @@ public partial class CustomizeOrderLinePage : ContentPage
         _vm = vm;
         BindingContext = _vm;
     }
-    private void OnToppingCheckedChanged(object sender, CheckedChangedEventArgs e)
-    {
-        var checkBox = sender as CheckBox;
-        if (checkBox == null) return;
-
-        if (checkBox.BindingContext is not Topping topping) return;
-        
-        if (BindingContext is not CustomizeOrderLineViewModel viewModel) return;
-
-        if (e.Value)
-        {
-            if (!viewModel.SelectedToppings.Contains(topping))
-            {
-                viewModel.SelectedToppings.Add(topping);
-            }
-        }
-        else
-        {
-            if (viewModel.SelectedToppings.Contains(topping))
-            {
-                viewModel.SelectedToppings.Remove(topping);
-            }
-        }
-    }
     
     private void OnSizeCheckedChanged(object sender, CheckedChangedEventArgs e)
     {

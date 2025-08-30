@@ -9,7 +9,6 @@
              Title="Order Details"
              BackgroundColor="#F5F5F5">
 
-    <!-- Register converters here -->
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:ListToCommaSeparatedConverter x:Key="ListToCommaSeparatedConverter" />

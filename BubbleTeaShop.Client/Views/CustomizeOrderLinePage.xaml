@@ -1,116 +1,80 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:converters="clr-namespace:BubbleTeaShop.Client.Converters"
              xmlns:enums1="clr-namespace:BubbleTeaShop.Backend.Enums;assembly=BubbleTeaShop.Backend"
+             xmlns:local="clr-namespace:BubbleTeaShop.Client.ViewModels"
+             xmlns:converters="clr-namespace:BubbleTeaShop.Client.Converters"
              x:Class="BubbleTeaShop.Client.Views.CustomizeOrderLinePage"
              x:Name="CustomizePage"
              Title="Customize Order">
-
+    
     <ContentPage.Resources>
-        <ResourceDictionary>
-            <converters:ToppingToIsCheckedConverter x:Key="ToppingToIsCheckedConverter" />
-            <converters:SizeToIsCheckedConverter x:Key="SizeToIsCheckedConverter" />
-        </ResourceDictionary>
+        <converters:SizeToIsCheckedConverter x:Key="SizeToIsCheckedConverter"/>
     </ContentPage.Resources>
 
-    <Grid RowDefinitions="Auto, *, Auto" ColumnDefinitions="*">
-        <Label
-            Text="Customize Your Item"
-            FontSize="24"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            Margin="20"
-            Grid.Row="0"
-            TextColor="Black"/>
+    <Grid RowDefinitions="Auto, *, Auto">
+        <Label Text="Customize Your Item"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="20"
+               Grid.Row="0"
+               TextColor="Black"/>
 
         <ScrollView Grid.Row="1" Margin="10">
             <VerticalStackLayout Spacing="15" Padding="10">
 
+                <!-- Menu item info -->
                 <Frame BackgroundColor="#E0F7FA" CornerRadius="10" Padding="15" HasShadow="True">
                     <VerticalStackLayout Spacing="5">
-                        <Label Text="{Binding MenuItemName}"
-                               FontSize="22" FontAttributes="Bold" TextColor="Black"/>
-                        <Label Text="{Binding BasePrice, StringFormat='Base Price: {0:C}'}"
-                               FontSize="16" TextColor="Black"/>
+                        <Label Text="{Binding MenuItemName}" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+                        <Label Text="{Binding BasePrice, StringFormat='Base Price: {0:C}'}" FontSize="16" TextColor="Black"/>
                     </VerticalStackLayout>
                 </Frame>
 
+                <!-- Quantity -->
                 <Frame BackgroundColor="#F0F8FF" CornerRadius="10" Padding="15" HasShadow="True">
                     <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10">
-                        <Label Text="Quantity:"
-                               FontSize="18" VerticalOptions="Center" TextColor="Black"/>
-                        <Entry Grid.Column="1"
-                               Placeholder="Enter Quantity"
-                               Keyboard="Numeric"
-                               Text="{Binding Quantity, Mode=TwoWay}"
-                               WidthRequest="100"
-                               HorizontalOptions="EndAndExpand"
+                        <Label Text="Quantity:" FontSize="18" VerticalOptions="Center" TextColor="Black"/>
+                        <Entry Grid.Column="1" Placeholder="Enter Quantity" Keyboard="Numeric"
+                               Text="{Binding Quantity, Mode=TwoWay}" WidthRequest="100" HorizontalOptions="EndAndExpand"
                                TextColor="Black"/>
                     </Grid>
                 </Frame>
 
+                <!-- Size selection -->
                 <Frame BackgroundColor="#F0F8FF" CornerRadius="10" Padding="15" HasShadow="True">
                     <VerticalStackLayout Spacing="5">
-                        <Label Text="Size:"
-                               FontSize="18" FontAttributes="Bold" TextColor="Black"/>
-                        <CollectionView
-                            ItemsSource="{Binding AvailableSizes}"
-                            SelectionMode="None">
-                            <CollectionView.ItemsLayout>
-                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
-                            </CollectionView.ItemsLayout>
+                        <Label Text="Size:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                        <CollectionView ItemsSource="{Binding AvailableSizes}" SelectionMode="None">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate x:DataType="enums1:Size">
-                                    <Grid Padding="0">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                        <RadioButton Grid.Column="0"
-                                                     GroupName="SizeSelectionGroup"
+                                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                                        <RadioButton GroupName="SizeGroup" 
                                                      CheckedChanged="OnSizeCheckedChanged"
-                                                     IsChecked="{Binding Source={x:Reference CustomizePage}, Path=BindingContext.SelectedSize, Converter={StaticResource SizeToIsCheckedConverter}, ConverterParameter={Binding .}}"                                               
-                                                     TextColor="{x:Static Colors.Black}" 
-                                                     Margin="0,0,5,0"/>
-                                        <Label Text="{Binding .}"
-                                               Grid.Column="1"
-                                               FontSize="16"
-                                               VerticalOptions="Center"
-                                               TextColor="Black"/>
-                                    </Grid>
+                                                     IsChecked="{Binding Source={x:Reference CustomizePage}, 
+                                                 Path=BindingContext.SelectedSize, 
+                                                 Converter={StaticResource SizeToIsCheckedConverter}, 
+                                                 ConverterParameter={Binding .}, 
+                                                 Mode=TwoWay}"/>
+                                        <Label Text="{Binding .}" VerticalOptions="Center" TextColor="Black"/>
+                                    </HorizontalStackLayout>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
+
                     </VerticalStackLayout>
                 </Frame>
 
+                <!-- Toppings -->
                 <Frame BackgroundColor="#F0F8FF" CornerRadius="10" Padding="15" HasShadow="True">
                     <VerticalStackLayout Spacing="10">
-                        <Label Text="Toppings:"
-                               FontSize="18" FontAttributes="Bold" TextColor="Black"/>
-                        <CollectionView
-                            ItemsSource="{Binding AvailableToppings}"
-                            SelectionMode="None">
+                        <Label Text="Toppings:" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                        <CollectionView ItemsSource="{Binding AvailableToppings}" SelectionMode="None">
                             <CollectionView.ItemTemplate>
-                                <DataTemplate x:DataType="enums1:Topping">
-                                    <Grid Padding="5">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-                                        <CheckBox IsChecked="{Binding Source={x:Reference CustomizePage}, 
-                                                    Path=BindingContext.SelectedToppings, 
-                                                    Converter={StaticResource ToppingToIsCheckedConverter}, 
-                                                    ConverterParameter={Binding .}}"
-                                                  CheckedChanged="OnToppingCheckedChanged"
-                                                  Grid.Column="0"
-                                                  Color="{x:Static Colors.Black}"/>
-                                        <Label Text="{Binding .}"
-                                               FontSize="16"
-                                               VerticalOptions="Center"
-                                               Grid.Column="1"
-                                               TextColor="Black"/>
+                                <DataTemplate x:DataType="local:ToppingSelectionItem">
+                                    <Grid Padding="5" ColumnDefinitions="Auto,*">
+                                        <CheckBox IsChecked="{Binding IsSelected}" Color="Black"/>
+                                        <Label Text="{Binding Topping}" VerticalOptions="Center" Grid.Column="1" TextColor="Black"/>
                                     </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -121,28 +85,11 @@
             </VerticalStackLayout>
         </ScrollView>
 
+        <!-- Buttons -->
         <Grid Grid.Row="2" ColumnDefinitions="*, *, *" Margin="20,10" ColumnSpacing="10">
-            <Button Grid.Column="0"
-                    Text="Cancel"
-                    Command="{Binding CancelCommand}"
-                    BackgroundColor="#D32F2F"
-                    TextColor="White"
-                    CornerRadius="10"
-                    Padding="15,10"/>
-            <Button Grid.Column="1"
-                    Text="Add More Items"
-                    Command="{Binding AddMoreItemsCommand}"
-                    BackgroundColor="#FFB300"
-                    TextColor="White"
-                    CornerRadius="10"
-                    Padding="15,10"/>
-            <Button Grid.Column="2"
-                    Text="Finalize Order"
-                    Command="{Binding FinalizeOrderCommand}"
-                    BackgroundColor="#4CAF50"
-                    TextColor="White"
-                    CornerRadius="10"
-                    Padding="15,10"/>
+            <Button Grid.Column="0" Text="Cancel" Command="{Binding CancelCommand}" BackgroundColor="#D32F2F" TextColor="White" CornerRadius="10" Padding="15,10"/>
+            <Button Grid.Column="1" Text="Add More Items" Command="{Binding AddMoreItemsCommand}" BackgroundColor="#FFB300" TextColor="White" CornerRadius="10" Padding="15,10"/>
+            <Button Grid.Column="2" Text="Finalize Order" Command="{Binding FinalizeOrderCommand}" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="10" Padding="15,10"/>
         </Grid>
     </Grid>
 </ContentPage>
